@@ -44,35 +44,43 @@ body{
 }
 
 .header_container .header_contents .header_gnb a img{
-	
+
 }
 
-.header_gnb_layer{
+.layer{
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 1001;
 	background-color: #FFFFFF;
 	display: none;
 }
 
-.header_gnb_layer .top_wrap{
+.layer .top_wrap{
 	width: 100%;
 }
 
-.header_gnb_layer .top_wrap .top_wrap_container{
+.layer .top_wrap_container{
     height: 3.75rem;
 	padding: 0 1.375rem 0 1.5rem;
 }
 
-.header_gnb_layer .top_wrap .top_wrap_container .top_wrap_contents{
+.layer .top_wrap_contents{
 	width: 100%;
     height: 100%;
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
+}
+
+.layer .top_wrap_contents .close{
+	padding : 0.2rem;
+}
+
+
+.header_gnb_layer{
+	z-index: 1001;
 }
 
 .footer{
