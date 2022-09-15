@@ -110,6 +110,11 @@ body{
 	margin-bottom: 2.0rem;
 }
 
+
+.submenu .header_gnb_layer_contents ul li{
+	margin-bottom: 1.25rem;
+}
+
 .header_gnb_layer_contents ul li a,
 .header_gnb_layer_contents ul li a span{
 	display: inline-block;
@@ -120,6 +125,9 @@ body{
 	padding-bottom: 0.25rem;
 }
 
+.submenu .header_gnb_layer_contents ul li a span{
+	color: #777777;
+}
 
 /*
 .header_gnb_layer_contents ul li.active a{
@@ -173,13 +181,13 @@ body{
 }
 
 .submenu .submenu-contents .title{
-	margin-bottom: 3.0rem;
+	margin-bottom: 1.5rem;
     display: flex;
 }
 
 .submenu .submenu-contents .title span{
 	font-family: 'ChosunNm', 'Noto Sans KR';
-	font-size: 2.5rem;
+	font-size: 2.25rem;
 	color: #242424;
 	margin-right: 0.5rem;
 }
