@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+    <title>::SCHS 믿음과 실력을 겸비한 인재 양성의 요람::</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./imgs/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/icons/favicon-16x16.png">
+    <link rel="manifest" href="./imgs/icons/site.webmanifest">
+    <link rel="mask-icon" href="./imgs/icons/safari-pinned-tab.svg" color="#ba0c0c">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_container">
+            <div class="header_contents">
+                <div class="header_logo">
+                    <a href="./index.html" class="header_logo_link">
+                        <img src="./imgs/mb_logo.svg" />
+                    </a>
+                </div>
+                <div class="header_gnb">
+                    <a href="javascript:openGnbMenu();" class="header_anchor">
+                        <img src="./imgs/mb_menu_open.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
+            beatae placeat aut maiores cupiditate similique laborum fugit veritatis sint eligendi vitae recusandae quasi
+            vero iure commodi.입학안내</p>
+
+        <script type="text/javascript">
+            //gnb메뉴 초기화. 각 서브페이지에 맞게 복사해야함
+            $(document).ready(function(){
+                /*
+                입학안내 메뉴는 아래 함수 호출이 필요없다.
+                let submenuId = "introduce";
+                readyGnbSubmenu(submenuId);
+                $(".mainmenu li[data-submenu-id='"+submenuId+"']").addClass("active");
+                $(".mainmenu li[data-submenu-id='"+submenuId+"']").addClass("lined");*/
+            });
+        </script>
+    </div>
+    <div class="header_gnb_layer layer">
+        <div class="layer_wrapper">
+            <div class="top_wrap">
+                <div class="top_wrap_container">
+                    <div class="top_wrap_contents">
+                        <a class="close" href="javascript:closeGnbMenu();">
+                            <img src="./imgs/mb_menu_close.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_gnb_layer_container layer_container mainmenu">
+                <div class="header_gnb_layer_contents">
+                    <div class="head">
+                        <a href="./index.html">
+                            <img src="./imgs/gnb_home.svg" alt="back to gnbmenu list">
+                        </a>
+                    </div>
+                    <ul>
+                        <li data-submenu-id="introduce">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>학교소개</span></a>
+                        </li>
+                        <li data-submenu-id="edu">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>교육과정</span></a>
+                        </li>
+                        <li data-submenu-id="life">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>학교생활</span></a>
+                        </li>
+                        <li class="active lined">
+                        <!-- <li class="active"> -->
+                            <a href="./apply.html"><span>입학안내</span></a>
+                        </li>
+                        <li data-submenu-id="news">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>학교소식</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_gnb_layer_container layer_container submenu" style="display:none;">
+                <div class="header_gnb_layer_contents">
+                    <div id="introduce" class="submenu-contents">
+                        <div class="head">
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/gnb_return.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="title">
+                            <span>학교소개</span>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <li>
+                                <!-- <li class="active"> -->
+                                    <a href="./introduce.html"><span>학교소개</span></a>
+                                </li>
+                                <li>
+                                    <a href="./distinction.html"><span>학교특징</span></a>
+                                </li>
+                                <li>
+                                    <a href="./teachers.html"><span>교직원소개</span></a>
+                                </li>
+                                <li>
+                                    <a href="./contact.html"><span>오시는길</span></a>
+                                </li>
+                                <li>
+                                    <a href="./facility.html"><span>시설안내</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="edu" class="submenu-contents">
+                        <div class="head">
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/gnb_return.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="title">
+                            <span>교육과정</span>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <!-- <li class="active"> -->
+                                <li>
+                                    <a href="./edupurpose.html"><span>교육목표</span></a>
+                                </li>
+                                <li>
+                                    <a href="./eduele.html"><span>초등과정</span></a>
+                                </li>
+                                <li>
+                                    <a href="./eduhigh.html"><span>중고등과정</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>&nbsp;</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>&nbsp;</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="life" class="submenu-contents">
+                        <div class="head">
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/gnb_return.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="title">
+                            <span>학교생활</span>                            
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <!-- <li class="active"> -->
+                                <li>
+                                    <a href="./lifefaith.html"><span>신앙교육</span></a>
+                                </li>
+                                <li>
+                                    <a href="./lifetenacity.html"><span>인성교육</span></a>
+                                </li>
+                                <li>
+                                    <a href="./lifeintelli.html"><span>지성교육</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>&nbsp;</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>&nbsp;</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="news" class="submenu-contents">
+                        <div class="head">
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/gnb_return.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="title">
+                            <span>학교소식</span>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <!-- <li class="active"> -->
+                                <li>
+                                    <a href="./bd_main.html"><span>공지사항</span></a>
+                                </li>
+                                <li>
+                                    <a href="./gallery_main.html"><span>갤러리</span></a>
+                                </li>
+                                <li>
+                                    <a href="./academicmng.html"><span>학적관리</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>&nbsp;</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>&nbsp;</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_gnb_layer_bottom">
+                <div class="contact">
+                    <span class="prefix">M</span>
+                    <span><a href="mailto:ggumdoseong@naver.com">ggumdoseong@naver.com</a></span>
+                </div>
+                <div class="contact">
+                    <span class="prefix">T</span>
+                    <span><a href="tel:02-2665-3744">02-2665-3744</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_container">
+            <div class="footer_logo">
+                <div class="footer_logo-schs">
+                    <a href="./index.html">
+                        <img src="./imgs/mb_footer_ci.png" alt="schs-logo-black">
+                    </a>
+                </div>
+                <div class="footer_links">
+                    <a href="https://www.youtube.com/channel/UCOIHxm0zStu8EO49toE-Nww"><img src="./imgs/link_youtube.png" alt="go-to-youtube"></a>
+                    <a href="http://kjv1611.or.kr/"><img src="./imgs/link_site.png" alt="go-to-site"></a>
+                </div>
+            </div>
+            <div class="short_cuts">
+                <span class="bold">SHORT CUTS</span>
+                <span><a href="javascript:;">학교소개</a></span>
+                <span><a href="javascript:;">교육목표</a></span>
+                <span><a href="javascript:;">신앙교육</a></span>
+                <span><a href="javascript:;">입학안내</a></span>
+            </div>
+            <div class="address">
+                <span>경기 김포시 고촌읍 장곡로 39 성경침례교회</span>
+            </div>
+            <div class="contact">
+                <span><a href="tel:02-2665-3744">tel: 02-2665-3744</a></span>
+                <span class="bar"><a href="mailto:ggumdoseong@naver.com">ggumdoseong@naver.com</a></span>
+            </div>
+            <div class="copyright">
+                <span>Copyright 2022 SeoulChristianHighSchool All Rights Reserved.</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
