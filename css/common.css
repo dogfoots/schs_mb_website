@@ -112,7 +112,7 @@ body{
 
 
 .submenu .header_gnb_layer_contents ul li{
-	margin-bottom: 1.25rem;
+	margin-bottom: 1.10rem;
 }
 
 .header_gnb_layer_contents ul li a,
@@ -126,7 +126,7 @@ body{
 }
 
 .submenu .header_gnb_layer_contents ul li a span{
-	color: #777777;
+	font-family: 'Noto Sans KR';
 }
 
 /*
@@ -180,29 +180,30 @@ body{
 	display: none;
 }
 
+.submenu .submenu-contents .head,
+.mainmenu .header_gnb_layer_contents .head{
+	text-align: right;
+	margin-bottom: 1.75rem;
+}
+
 .submenu .submenu-contents .title{
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.25rem;
     display: flex;
 }
 
 .submenu .submenu-contents .title span{
 	font-family: 'ChosunNm', 'Noto Sans KR';
-	font-size: 2.25rem;
+	font-size: 2.8rem;
 	color: #242424;
-	margin-right: 0.5rem;
 }
 
-.submenu .submenu-contents .title a img{
-	width: 2.5rem;
-	height: 2.5rem;
-}
 
 .submenu .submenu-contents .contents ul{
 	text-align: right;
 }
 
 .submenu .submenu-contents .contents ul li a span{
-	font-size: 2.0rem;
+	font-size: 1.70rem;
 }
 
 .footer{
