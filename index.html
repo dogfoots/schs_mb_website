@@ -53,32 +53,141 @@
             <div class="top_wrap">
                 <div class="top_wrap_container">
                     <div class="top_wrap_contents">
-                        <a class="close" href="javascript:closeGnbMenu();"><img src="./imgs/mb_menu_close.png"></a>
+                        <a class="close" href="javascript:closeGnbMenu();">
+                            <img src="./imgs/mb_menu_close.png">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="header_gnb_layer_container layer_container">
+            <div class="header_gnb_layer_container layer_container mainmenu">
                 <div class="header_gnb_layer_contents">
                     <ul>
-                        <li>
-                            <a href="javascript:;"><span>학교소개</span></a>
+                        <li data-submenu-id="introduce">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>학교소개</span></a>
+                        </li>
+                        <li data-submenu-id="edu">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>교육과정</span></a>
+                        </li>
+                        <li data-submenu-id="life">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>학교생활</span></a>
                         </li>
                         <li>
-                            <a href="javascript:;"><span>교육과정</span></a>
+                        <!-- <li class="active"> -->
+                            <a href="./apply.html"><span>입학안내</span></a>
                         </li>
-                        <li>
-                            <a href="javascript:;"><span>학교생활</span></a>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><span>입학안내</span></a>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><span>학교소식</span></a>
+                        <li data-submenu-id="news">
+                            <a href="javascript:;" onclick="goToSubmenu(this);"><span>학교소식</span></a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <div class="header_gnb_layer_container layer_container submenu" style="display:none;">
+                <div class="header_gnb_layer_contents">
+                    <div id="introduce" class="submenu-contents">
+                        <div class="title">
+                            <span>학교소개</span>
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/redo_submenu.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <li>
+                                <!-- <li class="active"> -->
+                                    <a href="javascript:;"><span>학교소개</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>학교특징</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>교직원소개</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>오시는길</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>시설안내</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="edu" class="submenu-contents">
+                        <div class="title">
+                            <span>교육과정</span>
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/redo_submenu.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <!-- <li class="active"> -->
+                                <li>
+                                    <a href="javascript:;"><span>교육목표</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>초등과정</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>중고등과정</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="life" class="submenu-contents">
+                        <div class="title">
+                            <span>학교생활</span>
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/redo_submenu.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <!-- <li class="active"> -->
+                                <li>
+                                    <a href="javascript:;"><span>신앙교육</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>인성교육</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>지성교육</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="news" class="submenu-contents">
+                        <div class="title">
+                            <span>학교소식</span>
+                            <a href="javascript:backToMainmenu();">
+                                <img src="./imgs/redo_submenu.svg" alt="back to gnbmenu list">
+                            </a>
+                        </div>
+                        <div class="contents">
+                            <ul>
+                                <!-- <li class="active"> -->
+                                <li>
+                                    <a href="javascript:;"><span>공지사항</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>갤러리</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;"><span>학적관리</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="header_gnb_layer_bottom">
+                <div class="contact">
+                    <span class="prefix">M</span>
+                    <span><a href="mailto:ggumdoseong@naver.com">ggumdoseong@naver.com</a></span>
+                </div>
+                <div class="contact">
+                    <span class="prefix">T</span>
+                    <span><a href="tel:02-2665-3744">02-2665-3744</a></span>
+                </div>
             </div>
         </div>
     </div>
