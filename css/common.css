@@ -126,7 +126,7 @@ body{
 	border-bottom: 2px solid #ab0101;
 }*/
 
-.header_gnb_layer_contents ul li a::after{
+.header_gnb_layer .header_gnb_layer_contents ul li a::after{
 	position: relative;
 	display: block;
 	right: 0rem;
@@ -135,11 +135,11 @@ body{
 	height: 2px;
 	background-color: #ab0101;
 	content: "";
-	-webkit-transition: all ease-out 500ms 1000ms;
-	transition: all ease-out 500ms 1000ms;
+	-webkit-transition: all ease-out 500ms;
+	transition: all ease-out 500ms;
 }
 
-.header_gnb_layer_contents ul li.active a::after{
+.header_gnb_layer .header_gnb_layer_contents ul li.active.lined a::after{
 	width: 100%;
 }
 
@@ -179,7 +179,7 @@ body{
 
 .submenu .submenu-contents .title span{
 	font-family: 'ChosunNm', 'Noto Sans KR';
-	font-size: 2.8rem;
+	font-size: 2.5rem;
 	color: #242424;
 	margin-right: 0.5rem;
 }
@@ -194,7 +194,7 @@ body{
 }
 
 .submenu .submenu-contents .contents ul li a span{
-	font-size: 2.2rem;
+	font-size: 2.0rem;
 }
 
 .footer{

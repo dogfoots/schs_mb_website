@@ -46,7 +46,17 @@
     <div class="container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
             beatae placeat aut maiores cupiditate similique laborum fugit veritatis sint eligendi vitae recusandae quasi
-            vero iure commodi.</p>
+            vero iure commodi.지성교육</p>
+
+        <script type="text/javascript">
+            //gnb메뉴 초기화. 각 서브페이지에 맞게 복사해야함
+            $(document).ready(function(){
+                let submenuId = "life";
+                readyGnbSubmenu(submenuId);
+                $(".mainmenu li[data-submenu-id='"+submenuId+"']").addClass("active");
+                $(".mainmenu li[data-submenu-id='"+submenuId+"']").addClass("lined");
+            });
+        </script>
     </div>
     <div class="header_gnb_layer layer">
         <div class="layer_wrapper">
@@ -149,7 +159,7 @@
                                 <li>
                                     <a href="./lifetenacity.html"><span>인성교육</span></a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="./lifeintelli.html"><span>지성교육</span></a>
                                 </li>
                             </ul>

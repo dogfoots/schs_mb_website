@@ -1,5 +1,7 @@
 function openGnbMenu(){
-    $(".header_gnb_layer").fadeIn('500');
+    $(".header_gnb_layer").fadeIn('500', function(){
+        //$(".mainmenu li.active").addClass("lined");    
+    });
     $('body').css('overflow','hidden');
 }
 
@@ -12,17 +14,25 @@ function closeGnbMenu(){
 
 function goToSubmenu(ele){
     //console.log("ee : " + $(ele).parent().data("submenu-id"));
-    let submenu_id = $(ele).parent().data("submenu-id");
+    let submenuId = $(ele).parent().data("submenu-id");
+    readyGnbSubmenu(submenuId);
+}
+
+function readyGnbSubmenu(submenuId){
     $(".header_gnb_layer .submenu .submenu-contents").hide();
-    $("#"+submenu_id).show();
+    $("#"+submenuId).show();
 
     $(".header_gnb_layer .mainmenu").fadeOut('250', function(){
         $(".header_gnb_layer .submenu").fadeIn('250');
-    });
+        $(".submenu li.active").addClass("lined");    
+    });   
+    
+    $(".submenu li").removeClass("lined");
 }
 
 function backToMainmenu(){
     $(".header_gnb_layer .submenu").fadeOut('250',function(){
         $(".header_gnb_layer .mainmenu").fadeIn('250');
     });
+    $(".submenu li").removeClass("lined");
 }
