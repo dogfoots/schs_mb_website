@@ -1,4 +1,44 @@
 
+:root{
+    --left-margin : 1.5rem;
+}
+
 .container{
     height: 100rem;
 }
+
+.section{
+    width: 100%;
+}
+
+.section1{
+    margin-top: calc(3.75rem + 3.0rem) ;
+    padding-left: var(--left-margin);
+}
+
+.section1 h1.title{
+    font-family: 'ChosunNm', 'Noto Sans KR';
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+
+.section2{
+    margin-top: calc(3.0rem);
+    overflow:hidden;
+}
+
+.section2 .bg_line_wrapper{
+    
+}
+
+.section2 .bg_line_wrapper .bg_line_box1{
+    margin-left :  var(--left-margin);
+}
+
+
+
+/*.star{
+    width: 3rem;
+    height: 3rem;
+    background-color: aqua;
+}*/
