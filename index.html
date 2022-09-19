@@ -55,14 +55,30 @@
             </h1>
         </div>
         <div class="section2 section">
+            <div class="copybox1">
+                <h2>서울크리스찬중고등학교는</h2>
+                <p>진화론, 인본주의와 같은 세상적인 가치관을<br>배격하고 성경적 가치관을 형성하도록 교육합니다.</p>
+            </div>
+            <div class="copybox2">
+                <h2>서울크리스찬중고등학교는</h2>
+                <p>자발적으로 주 예수 그리스도를 시인하는<br>학생들을 길러냅니다.</p>
+            </div>
             <div class="bg_line_wrapper">
                 <div class="bg_line_box1">
                     <img 
+                    class="bg_line_box1_bg bgimg"
                     srcset="./imgs/main_section_bg1_604.png 604w, ./imgs/main_section_bg1_1208.png 1208w"
-                    width="200%"
+                    sizes="200vw"
                     src="./imgs/main_section_bg1_604.png"
                     alt="bg line creation"/>
-                </div>
+                <!-- </div>
+                <div class="bg_line_box2">
+                    <img 
+                    class="bg_line_box2_bg bgimg"
+                    srcset="./imgs/main_section_bg2_605.png 605w, ./imgs/main_section_bg2_1210.png 1210w"
+                    src="./imgs/main_section_bg2_605.png"
+                    alt="bg line creation"/>
+                </div> -->
             </div>
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
@@ -72,6 +88,11 @@
             &nbsp;
         </div>
         <script type="text/javascript">
+            function getTransitionBgWidth(bgClassNm){
+                var res = $(bgClassNm).width();
+                return res;
+            }
+
             $(document).ready(function(){
                 gsap.registerPlugin(ScrollTrigger);
                 /*var tl = gsap.timeline();
@@ -80,6 +101,34 @@
                     .to(".star",{x:rem2px(5), rotation:360, fill:"yellow", duration:1}, "step2");
                 
                     tl.seek("step2");    */
+
+                let bgClassNm = ".bg_line_box1_bg";
+                gsap.to(
+                    bgClassNm,{
+                        scrollTrigger :{
+                            trigger : bgClassNm,
+                            start : "bottom+=10vw 100%-=10vw",
+                            end : "top 10vw",
+                            scrub : 1,
+                            markers: true,
+                        },
+                        x: -getTransitionBgWidth(bgClassNm),
+                        duration : 3
+                    });
+                /*
+                let bgClassNm2 = ".bg_line_box2_bg";
+                gsap.to(
+                    bgClassNm2,{
+                        scrollTrigger :{
+                            trigger : bgClassNm2,
+                            start : "bottom 100%-=10rem",
+                            end : "top 10rem",
+                            scrub : 1,
+                            markers: true,
+                        },
+                        x: getTransitionBgWidth(bgClassNm2),
+                        duration : 3
+                    });*/
             });
         </script>
     </div>
