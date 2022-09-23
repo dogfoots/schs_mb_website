@@ -18,12 +18,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" type="text/css" href="./css/font.css">
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/common.css">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css?v=20220923001">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css?v=20220923001">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v=20220923002">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v=20220923004">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/common.js?v=20220923001"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 	<script src="./js/ScrollTrigger.min.js"></script>
@@ -186,7 +186,7 @@
                             }
                         },
                         x: direction*getTransitionBgWidth(bgClassNm+"_bg"),
-                        duration : 3
+                        duration : 1
                     });
 
             }
@@ -195,11 +195,10 @@
             $(document).ready(function(){
                 gsap.registerPlugin(ScrollTrigger);
                 
-                /*
                 gsapBgAnimationInit(".bg_line_box1", -1);
                 gsapBgAnimationInit(".bg_line_box2", 1);
                 gsapBgAnimationInit(".bg_line_box3", -1);
-                */
+                
 
             });
         </script>

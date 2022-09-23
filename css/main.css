@@ -84,12 +84,12 @@
 .section2 .bg_line_wrapper .bg_line_box.bg_line_box1,
 .section2 .bg_line_wrapper .bg_line_box.bg_line_box3{
     margin-left :  var(--left-margin);
-    padding-bottom: 7rem;
+    margin-bottom: 7rem;
 }
 
 .section2 .bg_line_wrapper .bg_line_box.bg_line_box2{
     margin-right :  var(--left-margin);
-    padding-bottom: 7rem;
+    margin-bottom: 7rem;
 }
 
 .section2 .bg_line_wrapper .bg_line_box.bg_line_box2 .bg_line_box2_bg{
