@@ -55,16 +55,11 @@
             </h1>
         </div>
         <div class="section2 section">
-            <!--div class="copybox2 copybox">
-                <h2>서울크리스찬중고등학교는</h2>
-                <p>자발적으로 주 예수 그리스도를 시인하는<br>학생들을 길러냅니다.</p>
-            </div>-->
             <div class="bg_line_wrapper">
                 <div class="bg_line_box1 bg_line_box">
                     <img 
                     class="bg_line_box1_bg bgimg"
                     srcset="./imgs/main_section_bg1_604.png 604w, ./imgs/main_section_bg1_1208.png 1208w"
-                    height="112vw"
                     src="./imgs/main_section_bg1_604.png"
                     alt="bg line creation"/>
                     <div class="copybox1 copybox">
@@ -75,14 +70,37 @@
                             </div>
                         </div>
                     </div>
-                <!-- </div>
-                <div class="bg_line_box2">
+                </div>
+                <div class="bg_line_box2 bg_line_box">
                     <img 
                     class="bg_line_box2_bg bgimg"
                     srcset="./imgs/main_section_bg2_605.png 605w, ./imgs/main_section_bg2_1210.png 1210w"
                     src="./imgs/main_section_bg2_605.png"
-                    alt="bg line creation"/>
-                </div> -->
+                    alt="bg line confess"/>
+                    <div class="copybox2 copybox">
+                        <div class="copybox_wrapper">
+                            <div class="copybox_contents">
+                                <h2>서울크리스찬중고등학교는</h2>
+                                <p>자발적으로 주 예수 그리스도를 시인하는<br>학생들을 길러냅니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_line_box3 bg_line_box">
+                    <img 
+                    class="bg_line_box3_bg bgimg"
+                    srcset="./imgs/main_section_bg3_604.png 604w, ./imgs/main_section_bg3_1208.png 1208w"
+                    src="./imgs/main_section_bg3_604.png"
+                    alt="bg line services"/>
+                    <div class="copybox3 copybox">
+                        <div class="copybox_wrapper">
+                            <div class="copybox_contents">
+                                <h2>서울크리스찬중고등학교는</h2>
+                                <p>작은 것이라도 주님께 드려 섬기고자 하는<br> 학생들을 길러냅니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
@@ -104,38 +122,23 @@
                 return res;
             }
 
-            function parellexViewportTransition(){
-                return 0;//$(window).height()/4.0;
-            }
-            
-            $(document).ready(function(){
-                gsap.registerPlugin(ScrollTrigger);
-                /*var tl = gsap.timeline();
-                tl.addLabel("step2", 3)
-                    .to(".star",{x:rem2px(10), rotation:360, fill:"yellow", duration:1}, 0.0)
-                    .to(".star",{x:rem2px(5), rotation:360, fill:"yellow", duration:1}, "step2");
-                
-                    tl.seek("step2");    */
-
-                let bgClassNm = ".bg_line_box1_bg";
-                //var heightLimit = getTransitionBgHeight(bgClassNm);
-
-                //var offsetY = getScrollOffsetBgTop(bgClassNm);
-
+            function gsapBgAnimationInit(bgClassNm, direction){
+                //let bgClassNm = ".bg_line_box1_bg";
+                var topScrollStart = $(".bg_line_box1_bg").offset().top;
                 gsap.to(
-                    bgClassNm,{
+                    bgClassNm+"_bg",{
                         scrollTrigger :{
-                            trigger : bgClassNm,
-                            start : () => "top " + "" + $(".bg_line_box1_bg").offset().top,
-                            end : () => "center " + "" + $(".bg_line_box1_bg").offset().top,// ((window.innerHeight - (window.innerWidth*1.12))/2.0),
+                            trigger : bgClassNm+"_bg",
+                            start : () => "top " + "" + topScrollStart,
+                            end : () => "center-="+rem2px(10)+"px " + "" + topScrollStart,// ((window.innerHeight - (window.innerWidth*1.12))/2.0),
                             scrub : 1,
                             markers: true,
                             toggleClass: {
-                                targets: ".section2 .bg_line_wrapper .bg_line_box .copybox.copybox1", 
+                                targets: ".section2 .bg_line_wrapper .bg_line_box"+bgClassNm+" .copybox", 
                                 className: "active"
                             },
                             onToggle: self =>{
-                                var $copybox = $(".section2 .bg_line_wrapper .bg_line_box .copybox.copybox1");
+                                var $copybox = $(".section2 .bg_line_wrapper .bg_line_box"+bgClassNm+" .copybox");
                                 if(self.progress == 1){
                                     $copybox.addClass("active");
                                 }else{
@@ -143,26 +146,21 @@
                                 }
                             }
                         },
-                        x: -getTransitionBgWidth(bgClassNm),
+                        x: direction*getTransitionBgWidth(bgClassNm+"_bg"),
                         duration : 3
                     });
 
+            }
+
+            
+            $(document).ready(function(){
+                gsap.registerPlugin(ScrollTrigger);
+                
+                gsapBgAnimationInit(".bg_line_box1", -1);
+                gsapBgAnimationInit(".bg_line_box2", 1);
+                gsapBgAnimationInit(".bg_line_box3", -1);
 
 
-                /*
-                let bgClassNm2 = ".bg_line_box2_bg";
-                gsap.to(
-                    bgClassNm2,{
-                        scrollTrigger :{
-                            trigger : bgClassNm2,
-                            start : "bottom 100%-=10rem",
-                            end : "top 10rem",
-                            scrub : 1,
-                            markers: true,
-                        },
-                        x: getTransitionBgWidth(bgClassNm2),
-                        duration : 3
-                    });*/
             });
         </script>
     </div>

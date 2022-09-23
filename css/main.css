@@ -29,9 +29,8 @@
 }
 
 .section2 .bg_line_wrapper .bg_line_box{
-    margin-left :  var(--left-margin);
-    margin-bottom: 7rem;
     position: relative;
+    height: var(--bg-img-height);
 }
 
 .section2 .bg_line_wrapper .bg_line_box .bgimg{
@@ -80,3 +79,23 @@
 .section2 .bg_line_wrapper .bg_line_box .copybox.active .copybox_wrapper .copybox_contents p{
     opacity: 1;
 }
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box1,
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box3{
+    margin-left :  var(--left-margin);
+    padding-bottom: 7rem;
+}
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box2{
+    margin-right :  var(--left-margin);
+    padding-bottom: 7rem;
+}
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box2 .bg_line_box2_bg{
+    float: right;
+}
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box2 .copybox{
+    margin-left :  var(--left-margin);
+}
+
