@@ -2,6 +2,7 @@
 :root{
     --left-margin : 1.5rem;
     --bg-img-height : 112vw;
+    --header-height : 3.75rem;
 }
 
 .container{
@@ -13,14 +14,14 @@
 }
 
 .section1{
-    margin-top: calc(3.75rem + 3.0rem) ;
+    margin-top: calc( var(--header-height) + 3.0rem) ;
     padding-left: var(--left-margin);
 }
 
 .section1 h1.title{
     font-family: 'ChosunNm', 'Noto Sans KR', sans-serif;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
+    font-size: 9.8vw;
+    line-height: 13.5vw;
 }
 
 .section2{
@@ -99,3 +100,102 @@
     margin-left :  var(--left-margin);
 }
 
+.section3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 120vh;
+    background: -webkit-image-set(
+        url("../imgs/sec3_bg.png") 1x,
+        url("../imgs/sec3_bg@2x.png") 2x), black;
+    
+    background: image-set(
+        url("../imgs/sec3_bg.png") 1x,
+        url("../imgs/sec3_bg@2x.png") 2x), black;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+}
+
+.section3 .section_contents{
+    margin-left : var(--left-margin);
+}
+
+.section3 .section_contents .title{
+    display: block;
+    color: white;
+    font-family: 'ChosunNm', 'Noto Sans KR', sans-serif;
+    font-size: 5.0vh;
+    line-height: 7.5vh;
+    font-weight: 100;
+    opacity: 78%;
+    margin-bottom: 5.0vh;
+}
+
+.section3 .section_contents .iniquity-list li{
+    margin-bottom: 3.0vh;
+}
+
+.section3 .section_contents .iniquity-list li span{
+    color: white;
+    font-family: 'ChosunNm', 'Noto Sans KR', sans-serif;
+    font-size: 3.0vh;
+    font-weight: 100;
+    opacity: 78%;
+}
+
+
+.section4{
+    width: 100vw;
+
+}
+
+.section4 .pure-ways-bg{
+    background-color: #631919; 
+    padding-top: 10vh;
+    padding-bottom: 6vh;
+    padding-left: var(--left-margin);
+}
+
+.section4 .pure-ways-bg h2,
+.section4 .pure-ways-bg p,
+.section4 .pure-ways-bg span{
+    color: white    
+}
+
+.section4 .pure-ways-bg h2{
+    font-family: 'ChosunNm', 'Noto Sans KR', sans-serif;
+    font-size: 7.5vw;
+    line-height: 12.5vw;
+    font-weight: 100;
+    display: block;
+    margin-bottom: 4.0vh;
+}
+
+.section4 .pure-ways-bg p{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.3vw;
+    line-height: 7.0vw;  
+}
+
+.section4 .pure-ways-bg p.sep{
+    margin-bottom: 4.0vh;
+}
+
+.section4 .pure-ways-bg span{
+    display: block;
+    margin-top: 1.5vh;
+    font-family: 'Noto Sans KR';
+    font-weight: 100;
+    font-size: 4.0vw;
+    line-height: 7.0vw;  
+    opacity: 0.7;
+}
+
+.section4 .pure-ways-img-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
