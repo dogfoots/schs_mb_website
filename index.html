@@ -49,28 +49,32 @@
     <div class="container">
         <div class="section1 section">
             <h1 class="title">
-                "진짜"<br>
+                “진짜”<br>
                 그리스도인<br>
                 인재를 양성합니다.
             </h1>
         </div>
         <div class="section2 section">
-            <div class="copybox1">
-                <h2>서울크리스찬중고등학교는</h2>
-                <p>진화론, 인본주의와 같은 세상적인 가치관을<br>배격하고 성경적 가치관을 형성하도록 교육합니다.</p>
-            </div>
-            <div class="copybox2">
+            <!--div class="copybox2 copybox">
                 <h2>서울크리스찬중고등학교는</h2>
                 <p>자발적으로 주 예수 그리스도를 시인하는<br>학생들을 길러냅니다.</p>
-            </div>
+            </div>-->
             <div class="bg_line_wrapper">
-                <div class="bg_line_box1">
+                <div class="bg_line_box1 bg_line_box">
                     <img 
                     class="bg_line_box1_bg bgimg"
                     srcset="./imgs/main_section_bg1_604.png 604w, ./imgs/main_section_bg1_1208.png 1208w"
-                    sizes="200vw"
+                    height="112vw"
                     src="./imgs/main_section_bg1_604.png"
                     alt="bg line creation"/>
+                    <div class="copybox1 copybox">
+                        <div class="copybox_wrapper">
+                            <div class="copybox_contents">
+                                <h2>서울크리스찬중고등학교는</h2>
+                                <p>진화론, 인본주의와 같은 세상적인 가치관을<br>배격하고 성경적 가치관을 형성하도록 교육합니다.</p>
+                            </div>
+                        </div>
+                    </div>
                 <!-- </div>
                 <div class="bg_line_box2">
                     <img 
@@ -84,15 +88,26 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
             beatae placeat aut maiores cupiditate similique laborum fugit veritatis sint eligendi vitae recusandae quasi
             vero iure commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
+            beatae placeat aut maiores cupiditate similique laborum fugit veritatis sint eligendi vitae recusandae quasi
+            vero iure commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
+            beatae placeat aut maiores cupiditate similique laborum fugit veritatis sint eligendi vitae recusandae quasi
+            vero iure commodi.</p>
         <div class="star">
             &nbsp;
         </div>
         <script type="text/javascript">
             function getTransitionBgWidth(bgClassNm){
                 var res = $(bgClassNm).width();
+                res += rem2px(1.2);//(window.innerWidth*0.01) * 4;
                 return res;
             }
 
+            function parellexViewportTransition(){
+                return 0;//$(window).height()/4.0;
+            }
+            
             $(document).ready(function(){
                 gsap.registerPlugin(ScrollTrigger);
                 /*var tl = gsap.timeline();
@@ -103,18 +118,37 @@
                     tl.seek("step2");    */
 
                 let bgClassNm = ".bg_line_box1_bg";
+                //var heightLimit = getTransitionBgHeight(bgClassNm);
+
+                //var offsetY = getScrollOffsetBgTop(bgClassNm);
+
                 gsap.to(
                     bgClassNm,{
                         scrollTrigger :{
                             trigger : bgClassNm,
-                            start : "bottom+=10vw 100%-=10vw",
-                            end : "top 10vw",
+                            start : () => "top " + "" + $(".bg_line_box1_bg").offset().top,
+                            end : () => "center " + "" + $(".bg_line_box1_bg").offset().top,// ((window.innerHeight - (window.innerWidth*1.12))/2.0),
                             scrub : 1,
                             markers: true,
+                            toggleClass: {
+                                targets: ".section2 .bg_line_wrapper .bg_line_box .copybox.copybox1", 
+                                className: "active"
+                            },
+                            onToggle: self =>{
+                                var $copybox = $(".section2 .bg_line_wrapper .bg_line_box .copybox.copybox1");
+                                if(self.progress == 1){
+                                    $copybox.addClass("active");
+                                }else{
+                                    $copybox.removeClass("active");
+                                }
+                            }
                         },
                         x: -getTransitionBgWidth(bgClassNm),
                         duration : 3
                     });
+
+
+
                 /*
                 let bgClassNm2 = ".bg_line_box2_bg";
                 gsap.to(
