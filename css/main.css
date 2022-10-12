@@ -199,3 +199,240 @@
     flex-direction: column;
     align-items: center;
 }
+
+.section5, .section6, .section8{
+    padding-left: var(--left-margin);
+    padding-top : 20vw;
+    background-image:url(../imgs/core-bg1.svg);
+	background-position:right top;
+	background-repeat:no-repeat;
+    background-size: 60vw;
+
+}
+
+.section6{
+    padding-left: 0px;
+    background-image:url(../imgs/youtube-bg1.svg);
+	background-position:left top;
+    background-size: 30vw;
+}
+
+.section8{
+    padding-left: 0px;
+    background-image: unset;
+}
+
+.section5 .copies,
+.section6 .copies,
+.section8 .copies{
+    width: calc(100% - (var(--left-margin)*2) );
+}
+.section6 .copies,
+.section8 .copies{
+    padding-left: var(--left-margin);
+}
+
+.section5 .copies h2,
+.section6 .copies h2,
+.section7 .copies h2,
+.section8 .copies h2{
+    font-family: 'Noto Serif KR';
+    font-size: 7.0vw;
+    color: #242424;
+    line-height: 9.0vw;
+}
+
+.section5 .copies p,
+.section6 .copies p,
+.section7 .copies p,
+.section8 .copies p{
+    margin-top: 8.0vw;
+    line-height: 6.0vw;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.5vw;
+    color: #616161;
+}
+
+.section6 .copies p{
+    margin-top: 4.0vw;
+}
+
+.section7 .copies p,
+.section8 .copies p{
+    margin-top: 3.0vw;
+}
+
+.section5 .core-card-box{
+    margin-top: 12.0vw;
+    margin-bottom: 6.0vw;
+}
+
+.section5 .core-card-box .core-card img{
+    width: calc(100% - var(--left-margin));
+}
+
+.section5 .core-card-box .core-card .core-card-text-wrapper{
+    margin-top : 8vw;
+    width: calc(100% - (var(--left-margin)*2) );
+}
+
+.section5 .core-card-box .core-card .core-card-text-wrapper .core-card-title{
+    font-family: 'Noto Serif KR';
+    font-size: 5.8vw;
+    color: #242424;
+}
+
+.section5 .core-card-box .core-card .core-card-text-wrapper .core-card-body{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.5vw;
+    color: #616161;
+    line-height: 7.0vw;
+    margin-top: 6vw;
+}
+
+.section6 .play-box{
+    margin-top : 12.5vw;
+}
+
+.section6 .play-box .youtube-wrap{
+    position: relative;
+    height: 0;
+    padding-top: 0px;
+    padding-bottom: 56.25%;
+    overflow: hidden
+}
+
+.section6 .play-box .youtube-wrap iframe,
+.section6 .play-box .youtube-wrap object,
+.section6 .play-box .youtube-wrap embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section6 .play-box .short-cut-wrap{
+    text-align: center;
+    padding : 2.5vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+
+.section6 .play-box .short-cut-wrap a{
+	text-decoration-line: none;
+}
+
+.section6 .play-box .short-cut-wrap span{
+    color: #9F9F9F;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 3.5vw;
+}
+
+
+.section7{
+    padding-left: 0px;
+    background-image:url(../imgs/news-bg1.svg);
+	background-position:left top;
+	background-repeat:no-repeat;
+    background-size: 30vw;
+    padding-top: 30vw;
+}
+
+.section7 .news{
+    background-color: #FCFAF5;
+    padding-top: 10vw;
+
+    padding-bottom: 5vw;
+}
+
+.section7 .copies{
+    padding-left: var(--left-margin);
+}
+
+.section7 .news .news-body{
+    margin-left: var(--left-margin);
+    margin-top:15vw;
+    width: calc(100% - (var(--left-margin)*2) );
+    border-top: #9F9F9F 1px solid;
+}
+
+.section7 .news .news-body .news-item{
+    padding-top : 5.5vw;
+    padding-bottom : 5.5vw;
+    border-bottom: #9F9F9F 1px solid;
+}
+
+.section7 .news .news-body .news-item a{
+    text-decoration-line: none;
+}
+
+.section7 .news .news-body .news-item a .news-date{
+    color: #616161;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.0vw;
+}
+
+.section7 .news .news-body .news-item a .news-title{
+    color: #242424;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 5.0vw;
+    margin-top: 3vw;
+    line-height: 7.5vw;
+}
+
+.section7 .news .news-body .news-item a .news-preview{
+    color: #616161;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.5vw;
+    line-height: 6.5vw;
+    margin-top: 3vw;
+}
+
+.section8 .contact-map-wrap{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: 15vw;
+}
+
+.section8 .contact-body{
+    padding:10vw;
+}
+
+.section8 .contact-body > ul > li{
+    margin-bottom: 10vw;
+}
+
+.section8 .contact-body > ul > li > h5{
+    font-family: 'Noto Sans KR';
+    font-weight: 600;
+    font-size: 4.7vw;
+}
+
+.section8 .contact-body > ul > li > span,
+.section8 .contact-body ul.ways > li > span{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.0vw;
+    margin-top: 2.5vw;
+    display: block;
+    line-height: 6.0vw;
+}
+
+.section8 .contact-body ul.ways > li{
+    display: flex;
+}
+
+.section8 .contact-body ul.ways > li > span.num{
+    margin-right: 1vw;
+}

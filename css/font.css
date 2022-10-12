@@ -68,3 +68,11 @@
 		url(/fonts/NotoSansKR-Black.woff) format('woff'),
 		url(/fonts/NotoSansKR-Black.otf) format('opentype');
 }
+
+@font-face {
+	font-family: 'Noto Serif KR';
+	font-style: normal;
+	font-weight: 900;
+	src: 
+		url(/fonts/NotoSerifKR-Bold.otf) format('opentype');
+}
