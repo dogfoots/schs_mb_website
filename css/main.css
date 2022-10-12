@@ -263,8 +263,21 @@
     margin-top: 3.0vw;
 }
 
+.section5 .core-slide-ctrl-box{
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.section5 .core-slide-ctrl-box .circle-btn{
+    width: 8vw;
+    height: 8vw;
+    display: block;
+    margin-right: 8vw;
+}
+
 .section5 .core-card-box{
-    margin-top: 12.0vw;
+    margin-top: 3.0vw;
     margin-bottom: 6.0vw;
 }
 
@@ -281,6 +294,16 @@
     font-family: 'Noto Serif KR';
     font-size: 5.8vw;
     color: #242424;
+}
+
+.section5 .core-card-box .core-card .core-card-text-wrapper .core-card-head{
+    display: flex;
+    align-items: center;
+}
+
+.section5 .core-card-box .core-card .core-card-text-wrapper .core-card-head img{
+    width: 8vw;
+    margin-right: 3vw;
 }
 
 .section5 .core-card-box .core-card .core-card-text-wrapper .core-card-body{
