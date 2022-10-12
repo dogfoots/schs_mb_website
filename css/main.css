@@ -137,6 +137,10 @@
     margin-bottom: 3.0vh;
 }
 
+.section3 .section_contents .iniquity-list .iniquity{
+    display: inline-block;
+}
+
 .section3 .section_contents .iniquity-list li span{
     color: white;
     font-family: 'ChosunNm', 'Noto Sans KR', sans-serif;
@@ -144,6 +148,8 @@
     font-weight: 100;
     opacity: 78%;
 }
+
+
 
 
 .section4{

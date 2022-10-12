@@ -20,8 +20,8 @@
 
     <link rel="stylesheet" type="text/css" href="./css/font.css?v=20220923001">
     <link rel="stylesheet" type="text/css" href="./css/reset.css?v=20220923001">
-    <link rel="stylesheet" type="text/css" href="./css/common.css?v=20220923002">
-    <link rel="stylesheet" type="text/css" href="./css/main.css?v=20220923004">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v=20221012001">
+    <link rel="stylesheet" type="text/css" href="./css/main.css?v=20221012001">
     <link rel="stylesheet" type="text/css" href="./css/splide-core.min.css?v=20220923004">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js?v=20220923001"></script>
@@ -114,14 +114,14 @@
                     <br>자라나고 있습니까?
                 </h1>
                 <ul class="iniquity-list">
-                    <li><span>성적인 타락</span></li>
-                    <li><span>부도덕</span></li>
-                    <li><span>학교폭력</span></li>
-                    <li><span>끝없는 입시경쟁</span></li>
-                    <li><span>왕따</span></li>
-                    <li><span>욕설</span></li>
-                    <li><span>게임중독</span></li>
-                    <li><span>과도한 사교육과 경제적 부담</span></li>
+                    <li><span class="iniquity">성적인 타락</span></li>
+                    <li><span class="iniquity">부도덕</span></li>
+                    <li><span class="iniquity">학교폭력</span></li>
+                    <li><span class="iniquity">끝없는 입시경쟁</span></li>
+                    <li><span class="iniquity">왕따</span></li>
+                    <li><span class="iniquity">욕설</span></li>
+                    <li><span class="iniquity">게임중독</span></li>
+                    <li><span class="iniquity">과도한 사교육과<br>경제적 부담</span></li>
                 </ul>
             </div>
         </div>
@@ -378,6 +378,50 @@
                     });
 
             }
+            
+            function gsapIniqInit(){
+                let scaleVal = 1.5;
+                let iniquities = document.querySelectorAll(".iniquity");
+                for(let i=0; i < iniquities.length; i++){
+                    var item = iniquities.item(i);
+                    gsap.timeline({ 
+                        scrollTrigger :{
+                            trigger : item,
+                            start : () => "top-=100 center",
+                            end : () => "bottom+=100 center",
+                            toggleActions: 'restart none none reverse',
+                            scrub : 1,
+                            markers: true,
+                        }
+                    })
+                    .to(item,{
+                        scale : scaleVal,
+                        x : (item.clientWidth*scaleVal-item.clientWidth)/2.0,
+                        duration : 1
+                    })
+                    .to(item,{
+                        scale : 1,
+                        x : 0,
+                        duration : 1                        
+                    });
+                    /*gsap.to(
+                        item,{
+                        scrollTrigger :{
+                            trigger : item,
+                            start : () => "top center",
+                            end : () => "bottom center",
+                            toggleActions: 'restart none none reverse',
+                            scrub : 1,
+                            markers: true,
+                        },
+                        scale : scaleVal,
+                        x : (item.clientWidth*scaleVal-item.clientWidth)/2.0 ,
+                        duration : 1
+                    });*/
+
+                }
+                
+            }
 
             $(window).on('load', function(){
                 gsap.registerPlugin(ScrollTrigger);
@@ -385,6 +429,7 @@
                 gsapBgAnimationInit(".bg_line_box1", -1);
                 gsapBgAnimationInit(".bg_line_box2", 1);
                 gsapBgAnimationInit(".bg_line_box3", -1);
+                gsapIniqInit();
                 
                 g_splide = new Splide( '.splide.core-card-box', {
                     type   : 'loop',
