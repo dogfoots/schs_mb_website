@@ -206,6 +206,22 @@
     align-items: center;
 }
 
+.section4 .pure-section{
+    position: relative;
+    
+}
+.section4 .pure-section svg * {
+    transform-box: fill-box;
+  }
+
+.section4 .pure-section .over-mark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 .section5, .section6, .section8{
     padding-left: var(--left-margin);
     padding-top : 20vw;
