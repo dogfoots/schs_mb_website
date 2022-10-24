@@ -210,9 +210,10 @@
     position: relative;
     
 }
+
 .section4 .pure-section svg * {
     transform-box: fill-box;
-  }
+}
 
 .section4 .pure-section .over-mark{
     position: absolute;
