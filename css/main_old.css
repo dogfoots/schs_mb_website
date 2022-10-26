@@ -24,6 +24,81 @@
     line-height: 13.5vw;
 }
 
+.section2{
+    margin-top: calc(3.0rem);
+    overflow:hidden;
+}
+
+.section2 .bg_line_wrapper .bg_line_box{
+    position: relative;
+    height: var(--bg-img-height);
+}
+
+.section2 .bg_line_wrapper .bg_line_box .bgimg{
+    height: var(--bg-img-height);
+    display: inline-block;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox{
+    position: absolute;
+    left : 0px;
+    top: 0px;
+    display: inline-block;
+    height: 100%;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper{
+    height: 100%;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper .copybox_contents h2{
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 6.0vw;
+    color: #242424;
+    margin-bottom: 1.25rem;
+
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper .copybox_contents p{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.3vw;
+    color: #616161;
+    line-height: 8.0vw;
+
+    opacity: 0;
+    transition: all ease 0.5s 0.25s;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox.active .copybox_wrapper .copybox_contents h2,
+.section2 .bg_line_wrapper .bg_line_box .copybox.active .copybox_wrapper .copybox_contents p{
+    opacity: 1;
+}
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box1,
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box3{
+    margin-left :  var(--left-margin);
+    margin-bottom: 7rem;
+}
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box2{
+    margin-right :  var(--left-margin);
+    margin-bottom: 7rem;
+}
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box2 .bg_line_box2_bg{
+    float: right;
+}
+
+.section2 .bg_line_wrapper .bg_line_box.bg_line_box2 .copybox{
+    margin-left :  var(--left-margin);
+}
 
 .section3{
     display: flex;

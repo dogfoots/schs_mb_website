@@ -1,0 +1,82 @@
+
+.section2{
+    margin-top: calc(3.0rem);
+    overflow:hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section2 .bg_line_wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section2 .bg_line_wrapper .ci-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2 .bg_line_wrapper .mb-ci{
+    width: 50vw;
+    height: 60vw;
+    display: block;
+}
+
+.section2 .bg_line_wrapper .mb-ci-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.section2 .bg_line_wrapper svg * {
+    transform-box: fill-box;
+}
+
+.section2 .bg_line_wrapper .bg_line_box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .bgimg_wrapper{
+
+}
+
+.section2 .bg_line_wrapper .bg_line_box .bgimg_wrapper .bgimg{
+    width: 140%;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper .copybox_contents{
+    text-shadow: 1px 1px 2px black;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper .copybox_contents h2{
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 6.0vw;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+}
+
+.section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper .copybox_contents p{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.3vw;
+    color: #ffffff;
+    line-height: 8.0vw;
+}
