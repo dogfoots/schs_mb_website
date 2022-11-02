@@ -26,7 +26,6 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .section2 .bg_line_wrapper .bg_line_box .bgimg_wrapper{
     opacity: 0;
@@ -38,17 +37,19 @@
 
 .section2 .bg_line_wrapper .bg_line_box .copybox{
     opacity: 0;
+    margin-left: 1.5rem;
 }
 
+/*
 .section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper .copybox_contents{
     text-shadow: 1px 1px 2px black;
-}
+}*/
 
 .section2 .bg_line_wrapper .bg_line_box .copybox .copybox_wrapper .copybox_contents h2{
     font-family: 'Noto Sans KR';
     font-weight: 700;
     font-size: 6.0vw;
-    color: #ffffff;
+    color: #000;
     margin-bottom: 1.25rem;
 }
 
@@ -56,7 +57,7 @@
     font-family: 'Noto Sans KR';
     font-weight: 300;
     font-size: 4.3vw;
-    color: #ffffff;
+    color: #000;
     line-height: 8.0vw;
 }
 

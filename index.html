@@ -572,18 +572,27 @@
 
             }*/
 
+            function createTrigger(tl){
+                let endScroll="5000";
+                ScrollTrigger.create({
+                    trigger: ".section2",
+                    pin: true,
+                    scrub: 0.5,
+                    start: "top top",
+                    end: "+="+endScroll,
+                    animation: tl
+                    // once: true
+                  });
+            }
+
             function gsapBgAnimationInit(){
-                let endScroll="4000";
                 const $marks = document.querySelectorAll(".ci-marks");
                 const $mark1 = $(".ci-mark-1");
                 //const $bg1mask = $(".bgline-mask1-group");
                 const $bg2mask = $(".bgline-mask2-group");
                 const $bg3mask = $(".bgline-mask3-group");
                 
-
                 const $mbci = $(".mb-ci");
-                
-
                 
                 const $bg1 = $("#bg1");
                 const $bg2 = $("#bg2");
@@ -599,96 +608,84 @@
                 let tl_bg2 = gsap.timeline();
                 let tl_bg3 = gsap.timeline();
 
-                let st = ScrollTrigger.create({
-                  trigger: ".section2",
-                  pin: true,
-                  scrub: 0.5,
-                  start: "top top",
-                  end: "+="+endScroll,
-                  animation: tl_masks
-                  // once: true
-                });
+                
+                let tl_copy1 = gsap.timeline();
+                let tl_copy2 = gsap.timeline();
+                let tl_copy3 = gsap.timeline();
 
-                ScrollTrigger.create({
-                    trigger: ".section2",
-                    pin: true,
-                    scrub: 1,
-                    start: "top top",
-                    end: "+="+endScroll,
-                    animation: tl_mbci
-                    // once: true
-                  });
-
-                ScrollTrigger.create({
-                    trigger: ".section2",
-                    pin: true,
-                    scrub: 1,
-                    start: "top top",
-                    end: "+="+endScroll,
-                    animation: tl_bg1
-                    // once: true
-                  });
-
-                  ScrollTrigger.create({
-                      trigger: ".section2",
-                      pin: true,
-                      scrub: 1,
-                      start: "top top",
-                      end: "+="+endScroll,
-                      animation: tl_bg2
-                      // once: true
-                    });
-
-                ScrollTrigger.create({
-                    trigger: ".section2",
-                    pin: true,
-                    scrub: 1,
-                    start: "top top",
-                    end: "+="+endScroll,
-                    animation: tl_bg3
-                    // once: true
-                    });
-
+                createTrigger(tl_masks);
+                createTrigger(tl_mbci);
+                createTrigger(tl_bg1);
+                createTrigger(tl_bg2);
+                createTrigger(tl_bg3);
+                createTrigger(tl_copy1);
+                createTrigger(tl_copy2);
+                createTrigger(tl_copy3);
                     
                 tl_masks
-                .set($copy1, { alpha: 0})
                 .set($copy2, { alpha: 0})
                 .set($copy3, { alpha: 0})
                 .set($marks, { alpha: 0, scale: 0.01 })
                 .to($marks, {alpha: 1, duration: 3, scale: 2.0 })
                 .to($mark1, {scale: 40, duration: 1, ease: "none", xPercent: 200})
-                .to($mark1, {duration: 3})
-                .to($mark1, {duration: 4});
-
+                .to($marks, {duration: 7});
 
                 tl_mbci
                 .to($mbci, {alpha: 0, duration: 2, scale: 0.9})
-                .to($mbci, {duration: 5})
-                .to($mbci, {duration: 4});
+                .to($mbci, {duration: 9});
 
 
+                
                 tl_bg1
                 //.set($bg1mask, { alpha: 1, scale: 3.0})
                 .set($bg1, { alpha: 1, scale: 1.5})
                 .to($bg1, {alpha: 1, duration: 3, scale: 1.3 })
-                .to($bg1, {alpha: 1, duration: 4})
-                .to($bg1, {alpha: 1, duration: 4});
+                .to($bg1, {duration: 8 });
+
                 //.to($bg1mask, {alpha: 1, duration: 4, scale: 1.0 , xPercent: -100})
+                
+                let copy1Var = -((($("#bg1").height()*1.5)/2) + ($("#copy1").height()/2));
+                //, y : copy1Var + (-1.0*(copy1Var/20))
+                tl_copy1
+                .set($copy1, { alpha: 0, y :  copy1Var})
+                .to($copy1, {alpha: 1, duration: 3})
+                .to($copy1, {alpha: 0, duration: 1})
+                .to($copy1, {duration: 7});
+
 
                 tl_bg2
                 .set($bg2mask, { alpha: 1, scale:5.0, xPercent: 1000})
                 .set($bg2, { alpha: 1, scale:1.3})
-                .to($bg2, {alpha: 1, duration: 3})
+                .to($bg2, {alpha: 1, duration: 3.5})
                 .to($bg2mask, {alpha: 1, duration: 4, scale: 20.0 , xPercent: -100})
-                .to($bg2, {alpha: 1, duration: 4})
-                //.to($bg2mask, {alpha: 1, duration: 4, scale: 1.0 , xPercent: -100})
+                .to($bg2, {alpha: 1, duration: 3.5});
+                
+
+                let copy2Var = ((($("#bg3").height()*1.5)/2) + ($("#copy3").height()/2));
+
+                tl_copy2
+                .set($copy2, { alpha: 0, y :  copy2Var})
+                .to($copy2, {alpha: 0, duration: 3.5})
+                .to($copy2, {alpha: 1, duration: 3, y : copy2Var + (1.0*(copy2Var/20))})
+                .to($copy2, {alpha: 0, duration: 1})
+                .to($copy2, {duration: 3.5});
+
 
                 tl_bg3
                 .set($bg3, { alpha: 1, scale: 1.5})
                 .set($bg3mask, { alpha: 1, scaleX:0.0, scaleY:20.0})
-                .to($bg3, { duration: 7})
+                .to($bg3, { duration: 6.5})
                 .to($bg3mask, {alpha: 1, duration: 4, scaleX: 10.0, scaleY:20.0})
-                
+                .to($bg3, { duration: 0.5})
+
+                let copy3Var = -((($("#bg3").height()*1.5)/2) + ($("#copy3").height()/2));
+
+                tl_copy3
+                .set($copy3, { alpha: 0, y :  copy3Var})
+                .to($copy3, {alpha: 0, duration: 6.5})
+                .to($copy3, {alpha: 1, duration: 3, y : copy3Var + (1.0*(copy3Var/20))})
+                .to($copy3, { duration: 0.5});
+
 
             }
             
