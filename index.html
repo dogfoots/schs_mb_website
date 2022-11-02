@@ -573,7 +573,7 @@
             }*/
 
             function createTrigger(tl){
-                let endScroll="5000";
+                let endScroll=""+(window.innerHeight*4*1.5);//"3000";
                 ScrollTrigger.create({
                     trigger: ".section2",
                     pin: true,
@@ -654,7 +654,7 @@
 
 
                 tl_bg2
-                .set($bg2mask, { alpha: 1, scale:5.0, xPercent: 1000})
+                .set($bg2mask, { alpha: 1, scale:5.0, xPercent: 1500})
                 .set($bg2, { alpha: 1, scale:1.3})
                 .to($bg2, {alpha: 1, duration: 3.5})
                 .to($bg2mask, {alpha: 1, duration: 4, scale: 20.0 , xPercent: -100})
@@ -675,7 +675,7 @@
                 .set($bg3, { alpha: 1, scale: 1.5})
                 .set($bg3mask, { alpha: 1, scaleX:0.0, scaleY:20.0})
                 .to($bg3, { duration: 6.5})
-                .to($bg3mask, {alpha: 1, duration: 4, scaleX: 10.0, scaleY:20.0})
+                .to($bg3mask, {alpha: 1, duration: 4, scaleX: 20.0, scaleY:20.0})
                 .to($bg3, { duration: 0.5})
 
                 let copy3Var = -((($("#bg3").height()*1.5)/2) + ($("#copy3").height()/2));
@@ -729,7 +729,7 @@
                   pin: true,
                   scrub: 1,
                   start: "top top",
-                  end: "+=2000",
+                  end: "+="+(window.innerHeight*1.8),
                   animation: tl
                   // once: true
                 });
