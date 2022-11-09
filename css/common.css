@@ -1,6 +1,9 @@
 /**/
 :root{
 	--footer-height: 50rem;
+	--header-height : 3.75rem;
+    --submenu-lr-margin : 5vw;
+	--layer-pop-contents-height : 70%;
 }
 
 html, body{
@@ -29,7 +32,7 @@ body{
 
 .header_container{
 	padding: 0 1.9rem 0 1.5rem;
-    height: 3.75rem;
+    height: var(--header-height);
 }
 
 .header_container .header_contents{
@@ -289,4 +292,104 @@ body{
 .next-btn{
 	background:url(../imgs/left_arrow_grey.svg) no-repeat center center;
     transform: scaleX(1);
+}
+
+
+.submenu-h{
+	font-family: 'Noto Serif KR';
+    font-size: 7.0vw;
+    color: #242424;
+	margin-top: calc( var(--header-height) + 3.0vh);
+	margin-left: var(--submenu-lr-margin);
+}
+
+.submenu-p{
+	font-family: 'Noto Sans KR';
+	font-size: 4.2vw;
+	color: #616161;
+	margin-left: var(--submenu-lr-margin);
+	line-height: 3.7vh;
+	font-weight: 300;
+	margin-top: 2vh;
+	width: calc( 100% - (var(--submenu-lr-margin)*2));
+}
+
+.layer-pop{
+	z-index: 1001;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background-color: #242424CF;
+	width: 100%;
+	height: 100%;
+}
+
+.layer-pop .top-area,
+.layer-pop .bottom-area{
+	width: 100%;
+	height : calc( ( 100% - var(--layer-pop-contents-height) ) / 2 );
+}
+
+.layer-pop .top-area{
+	position: relative;
+}
+
+.layer-pop .layer-contents-wrap{
+	width: 100%;
+	height : var(--layer-pop-contents-height);
+	background-color: #ffffff;
+	padding-left: var(--submenu-lr-margin);
+	padding-right: var(--submenu-lr-margin);
+	padding-top: 5vh;
+}
+
+.layer-pop .layer-contents-wrap .layer-contents{
+	width: calc( 100% - var(--submenu-lr-margin)*2 );
+	height : calc( 100% - 5vh );
+	overflow-y: auto;
+	font-family: 'Noto Sans KR';
+	font-size: 4.2vw;
+	font-weight: 300;
+	line-height: 3.4vh;
+	color: #616161;
+	text-align: justify;
+	padding-right: 6vw;
+}
+
+.layer-pop .top-area .close-btn{
+	display: block;
+	width : 5vw;
+	height: 5vw;
+	right: 10vw;
+	bottom: 10vw;
+	position: absolute;
+}
+
+.layer-pop .top-area .close-btn img{
+	padding : 5vw;
+	width: 100%;
+	height: 100%;
+}
+
+
+.rect-btn{
+    margin-top: 2.5vh;
+    color: #707070;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 4.5vw;
+    width: 100%;
+    text-align: center;
+    border: #707070 solid 1px;
+    padding-top: 1.7vh;
+    padding-bottom: 1.7vh;
+}
+
+.rect-btn a{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #707070;
+	text-decoration-line: none;
+    display: block;
 }

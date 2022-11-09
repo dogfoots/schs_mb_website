@@ -40,3 +40,34 @@ function backToMainmenu(){
 function rem2px(rem) {    
     return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
+
+let scrollPosition = 0;
+
+function openPopup(classNm){
+    const body = document.querySelector("body");
+    
+    scrollPosition = window.pageYOffset;
+    body.style.overflow = 'hidden';
+    body.style.position = 'fixed';
+    body.style.top = "-"+scrollPosition+"px";
+    body.style.width = '100%';
+
+    $(classNm).fadeIn(150, function(){
+        //$(".mainmenu li.active").addClass("lined");    
+    });
+}
+
+function closePopup(classNm){
+    //alert('a');
+    const body = document.querySelector("body");
+    //alert('b');
+    $(classNm).fadeOut(150, function(){
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, scrollPosition);
+    });
+    //alert('c');
+}
+
