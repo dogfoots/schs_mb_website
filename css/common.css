@@ -27,7 +27,7 @@ body{
     backdrop-filter: saturate(170%) blur(25px);
     background-image: linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.1));*/
 	background-color: #ffffffcc;
-    transition: background-color .3s,opacity .4s;
+    /*transition: background-color .3s,opacity .4s;*/
 }
 
 .header_container{
