@@ -21,9 +21,11 @@
     <link rel="stylesheet" type="text/css" href="./css/font.css">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/introduce.css">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 
 <body>
@@ -44,9 +46,259 @@
         </div>
     </header>
     <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
-            beatae placeat aut maiores cupiditate similique laborum fugit veritatis sint eligendi vitae recusandae quasi
-            vero iure commodi.교직원소개</p>
+        <h2 class="submenu-h">교직원소개</h2>
+        <p class="submenu-p">학생들을 사랑하는 우리학교 선생님들을 소개합니다.</p>
+
+        <div class="teacher-cards-wrap">
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/psy.png" alt="박승용 목사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">박승용</span>
+                    <span class="position">교장</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/jji.png" alt="장준익 교감">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">장준익</span>
+                    <span class="position">교감</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/kjh.png" alt="강재훈 교감">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">강재훈</span>
+                    <span class="position">교감</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/kms.png" alt="김명숙 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>교육의 목적은 답을 찾는 것이 아니라 답을 찾기 위해 생각하는 것을 가르치는 것</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">김명숙</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/ksj.png" alt="김수진 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>교육은 교사가 일방적으로 만들어내는 것이 아니다. 학생과 교사가 함께 배우려는 의지를 가지고 깊이 있게 질문하고 탐색하여 새로운 지식과 지혜를 얻는 것이다.</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">김수진</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/ksh.png" alt="김수호 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>너희는 주 너희 하나님을 따르며 그분을 두려워하고, 그분의 계명들을 지키며 그분의 음성에 복종하고, 또 너희는 그분을 섬기며 그분께 밀착할지니라. 신 13:4</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">김수호</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/poi.png" alt="박옥이 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>모든 일에 정신을 차리고, 생애 파도 같은 고난을 견뎌내는 믿음으로 전도자의 일을 소홀히 하지 말며 실력을 갖추어 직무를 완성해내는 그리스도인 인재양성.</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">박옥이</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/sar.png" alt="서아름 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>•자기 주도적인 미술 활동을 통해 창의・융합적으로 사고하고 표현할 수 있는 능력
+                            •주제와 의도에 적합한 표현 과정을 계획하고 점검하여 효과적으로 작품을 제작하는 능력</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">서아름</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/sjy.png" alt="손주영 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>靑出於藍而靑於藍이라 했듯, 우리 학생들은 저보다 훨씬 훌륭한 인재로 자라날 것입니다. 다 커서 복음을 믿고 구원받은 저보다 앞선 출발점에서, 정도를 따라 달려 나가기 때문입니다.</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">손주영</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/jeh.png" alt="장은혜 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>하나님을 가장 사랑하고 바른 성경을 존중하며 영원히 남는 일에 생을 쏟도록 돕는 사람 "He gives all. He asks all." (Rom 8:32, Gen 22:12)</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">장은혜</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/jmh.png" alt="정민화 코칭교사">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>The LORD is my light! 하나님을 사랑하는 아이, 이웃을 사랑하는 아이, 창조세계를 사랑하는 아이로 자라갑니다.</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">정민화</span>
+                    <span class="position">코칭교사</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/ssr.png" alt="손세린 첼로">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">손세린</span>
+                    <span class="position">첼로</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/hek.png" alt="한은경 클라리넷">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">한은경</span>
+                    <span class="position">클라리넷</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/cjh.png" alt="최주흥 바이올린">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p>음악은 우리를 구원하신 주를 찬양하며, 그분을 영화롭게 해 드리는 최상의 도구!!
+                            전심을 다하여 주를 찬양하는 우리 서울크리스찬중고등학교 학생들!!</p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">최주흥</span>
+                    <span class="position">바이올린</span>
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img class="teacher-img" src="./imgs/teachers/pss.png" alt="박석순 도서관장">
+                <div class="teacher-desc-wrap" style="opacity:0;">
+                    <div class="teacher-desc">
+                        <h4>인사말</h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="name-box">
+                    <span class="name">박석순</span>
+                    <span class="position">도서관장</span>
+                </div>
+            </div>
+        </div>
+        <div class="teacher-cert-coach">
+            <img src="./imgs/coaching.png" width="33%" alt="한국코칭학회">
+            <p>서울크리스찬중고등학교 코칭교사는<br>한국코칭학회 코치인증과정 수료</p>
+        </div>
+        <script>
+            function showCardGreet(targetCard){
+                $img = targetCard.find(".teacher-img");
+                $desc = targetCard.find(".teacher-desc-wrap");
+                var tl = gsap.timeline();
+                var tl2 = gsap.timeline();
+                tl
+                .set($desc, { alpha: 0, transform:"rotateY(-180deg)"})
+                .to($desc, {alpha: 1 , transform:"rotateY(0deg)", duration: 1, ease:"power2.inOut"});
+
+                tl2
+                .set($img, { alpha: 1, transform:"rotateY(0deg)"})
+                .to($img, {alpha: 0 , transform:"rotateY(180deg)", duration: 1, ease:"power2.inOut"});
+            }
+
+            function showCardTeacher(targetCard){
+                $img = targetCard.find(".teacher-img");
+                $desc = targetCard.find(".teacher-desc-wrap");
+
+                var tl = gsap.timeline();
+                var tl2 = gsap.timeline();
+                tl
+                .set($desc, { alpha: 1, transform:"rotateY(0deg)"})
+                .to($desc, {alpha: 0 , transform:"rotateY(180deg)", duration: 1, ease:"power2.inOut"});
+
+                tl2
+                .set($img, { alpha: 0, transform:"rotateY(-180deg)"})
+                .to($img, {alpha: 1 , transform:"rotateY(0deg)", duration: 1, ease:"power2.inOut"});
+            }
+
+            $(window).on('load', function(){
+                $(".teacher-card").each(function (index, item) {
+                    let descStr = $(item).find(".teacher-desc p").text();
+                    if(descStr.length == 0) return;
+
+                    $(item).on('click', function(e){
+                        if($(item).hasClass("on")){
+                            $(item).removeClass("on");
+                            showCardTeacher($(item));
+                        }else{
+                            $(item).addClass("on");
+                            showCardGreet($(item));
+                        }
+                    });
+               });
+            });
+        </script>
 
         <script type="text/javascript">
             //gnb메뉴 초기화. 각 서브페이지에 맞게 복사해야함

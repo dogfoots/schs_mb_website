@@ -293,3 +293,154 @@
     margin-bottom: 3.4vh;
     border-bottom: #414141 solid 1.5px;
 }
+
+
+
+
+
+.teacher-cards-wrap{
+    width: calc( 100% - (var(--submenu-lr-margin)*2) );
+    margin-top: 8vh;
+    padding-left: var(--submenu-lr-margin);   
+    padding-right: var(--submenu-lr-margin); 
+}
+
+.teacher-cards-wrap .teacher-card{
+    width: 100%;
+    position: relative;
+    margin-bottom: 12vh;
+}
+
+.teacher-cards-wrap .teacher-card .teacher-img{
+    width: 100%;
+
+}
+
+.teacher-cards-wrap .teacher-card .teacher-desc-wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height : calc( ( 100vw - (var(--submenu-lr-margin)*2) ) * ( 473 / 384 ) );
+    
+    background-image:url(../imgs/teacher-greet-bg.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+
+.teacher-cards-wrap .teacher-card .teacher-desc-wrap .teacher-desc{
+    width: 100%;
+    height: 100%;
+
+}
+
+.teacher-cards-wrap .teacher-card .teacher-desc-wrap .teacher-desc h4{
+    margin-top : 6vh;
+    margin-left : 10vw;
+	font-family: 'Noto Sans KR';
+    font-weight: 700;
+    color: #242424;
+	font-size: 6.5vw;
+}
+
+.teacher-cards-wrap .teacher-card .teacher-desc-wrap .teacher-desc p{
+    padding-left : 10vw;
+    padding-right : 10vw;
+    color: #242424;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 1.0rem;
+    margin-top: 3vh;
+    line-height: 1.7rem;
+}
+
+.teacher-cards-wrap .teacher-card .name-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.teacher-cards-wrap .teacher-card .name-box .name{
+	font-family: 'Noto Sans KR';
+	font-size: 5.5vw;
+    font-weight: 700;
+    color: #414141;
+}
+
+.teacher-cards-wrap .teacher-card .name-box .position{
+	font-family: 'Noto Sans KR';
+	font-size: 5.0vw;
+    font-weight: 400;
+    color: #4141418f;
+    margin-left: 2vw;
+}
+
+.teacher-cert-coach{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.teacher-cert-coach p{
+    margin-top: 1vh;
+    text-align: center;
+    font-family: 'Noto Sans KR';
+	font-size: 0.8rem;
+    font-weight: 300;
+    color: #616161;
+    line-height: 1.2rem;
+
+}
+
+
+
+.contact-map-wrap{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: 15vw;
+}
+
+.contact-body{
+    padding-top:10vw;
+    padding-left: var(--submenu-lr-margin);
+    padding-right: var(--submenu-lr-margin);
+    padding-bottom:10vw;
+}
+
+.contact-body > ul > li{
+    margin-bottom: 10vw;
+}
+
+.contact-body > ul > li > h5{
+    font-family: 'Noto Sans KR';
+    font-weight: 600;
+    font-size: 4.7vw;
+}
+
+.contact-body > ul > li > span,
+.contact-body ul.ways > li > span{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.0vw;
+    margin-top: 2.5vw;
+    display: block;
+    line-height: 6.0vw;
+}
+
+.contact-body ul.ways > li{
+    display: flex;
+}
+
+.contact-body ul.ways > li > span.num{
+    margin-right: 1vw;
+}
