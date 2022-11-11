@@ -444,3 +444,69 @@
 .contact-body ul.ways > li > span.num{
     margin-right: 1vw;
 }
+
+
+
+.fac-section{
+    padding-left: var(--submenu-lr-margin);
+    margin-top: 8vh;
+}
+
+.fac-section h3{
+    font-family: 'Noto Sans KR';
+	font-size: 5.5vw;
+    font-weight: 700;
+    color: #242424;
+}
+
+.fac-section .core-card-box-wrap{
+    overflow-x: scroll;
+    margin-top: 2.6vh;
+    padding-bottom: 1.5vh;
+    margin-bottom: 3.0vh;
+}
+
+.fac-section .core-card-box{
+    width : 500%;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+}
+.fac-section .core-card-box .core-card{
+    margin-right: calc( var(--submenu-lr-margin) / 2 );
+}
+
+.fac-section .core-card-box .core-card img{
+    width: calc(100vw - calc( var(--submenu-lr-margin) * 2 ));
+}
+
+/*
+.fac-section .core-card-box .core-card .core-card-text-wrapper{
+    margin-top : 8vw;
+    width: calc(100vw - (var(--left-margin)*2) );
+}
+
+.fac-section .core-card-box .core-card .core-card-text-wrapper .core-card-title{
+    font-family: 'Noto Serif KR';
+    font-size: 5.8vw;
+    color: #242424;
+}
+
+.fac-section .core-card-box .core-card .core-card-text-wrapper .core-card-head{
+    display: flex;
+    align-items: center;
+}
+
+.fac-section .core-card-box .core-card .core-card-text-wrapper .core-card-head img{
+    width: 8vw;
+    margin-right: 3vw;
+}
+
+.fac-section .core-card-box .core-card .core-card-text-wrapper .core-card-body{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 4.5vw;
+    color: #616161;
+    line-height: 7.0vw;
+    margin-top: 6vw;
+}*/
