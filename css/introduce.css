@@ -445,7 +445,9 @@
     margin-right: 1vw;
 }
 
-
+.fac-section-wrap{
+    margin-bottom: 15vh;
+}
 
 .fac-section{
     padding-left: var(--submenu-lr-margin);
@@ -467,7 +469,6 @@
 }
 
 .fac-section .core-card-box{
-    width : 500%;
     display: flex;
     flex-direction: row;
     align-items:flex-start;
@@ -478,6 +479,7 @@
 
 .fac-section .core-card-box .core-card img{
     width: calc(100vw - calc( var(--submenu-lr-margin) * 2 ));
+    height: calc( ( 100vw - calc( var(--submenu-lr-margin) * 2 )) * 0.74 );
 }
 
 /*
