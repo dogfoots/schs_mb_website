@@ -1,0 +1,67 @@
+
+.purpose-wrap{
+    margin-left: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.purpose-wrap h3{
+	font-family: 'Noto Serif KR';
+    font-size: 6.0vw;
+    color: #242424;
+    text-align: center;
+    margin-top: 5vh;
+    line-height: 3.0rem;
+}
+
+.purpose-cards-wrap{
+    margin-left: var(--submenu-lr-margin);
+    margin-right: var(--submenu-lr-margin);
+    width: calc( 100% - (var(--submenu-lr-margin) * 2));
+
+    margin-bottom: 13vh;
+}
+
+.purpose-cards-wrap .purpose-card{
+    width: 100%;
+    margin-top : 7vh;
+}
+
+.purpose-cards-wrap .purpose-card img{
+    width: 100%;
+}
+
+.purpose-cards-wrap .purpose-card h3{
+    font-family: 'Noto Sans KR';
+	font-size: 1.5rem;
+    font-weight: 700;
+    color: #242424;
+    margin-top : 2.4vh;
+}
+
+.purpose-cards-wrap .purpose-card p.purpose-sub{
+	font-size: 1.35rem;
+    font-weight: 500;
+    color: #242424;
+    margin-top : 1.5vh;
+}
+
+.purpose-cards-wrap .purpose-card .purpose-body{
+    margin-top : 3.0vh;
+    color: #616161;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+}
+
+
+.purpose-cards-wrap .purpose-card .purpose-body li{
+    margin-top: 1.7vh;
+    font-size: 1.0rem;
+}
+
+.purpose-cards-wrap .purpose-card .purpose-body li::before{
+    content: "-";
+    margin-right: 0.5rem;
+}
