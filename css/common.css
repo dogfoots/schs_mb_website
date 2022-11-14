@@ -312,6 +312,11 @@ body{
 	font-weight: 300;
 	margin-top: 2vh;
 	width: calc( 100% - (var(--submenu-lr-margin)*2));
+	
+}
+
+.submenu-p strong{
+	font-weight: 500;
 }
 
 .layer-pop{

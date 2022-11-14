@@ -57,11 +57,168 @@
 
 
 .purpose-cards-wrap .purpose-card .purpose-body li{
-    margin-top: 1.7vh;
+    margin-top: 1.3vh;
     font-size: 1.0rem;
+    line-height: 1.5rem;
 }
 
 .purpose-cards-wrap .purpose-card .purpose-body li::before{
     content: "-";
     margin-right: 0.5rem;
+}
+
+
+
+
+.ele-tab-box{
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin-left: var(--submenu-lr-margin);
+    margin-right: var(--submenu-lr-margin);
+    width: calc( 100% - (var(--submenu-lr-margin) * 2));
+}
+
+.ele-tab-box li{
+    color: #616161;
+    font-family: 'Noto Sans KR';
+	font-size: 1.15rem;
+    line-height: 1.5rem;
+}
+
+.ele-tab-box li.active{
+    color: #AB0101;
+    border-bottom: #AB0101 solid 1px;
+}
+
+.ele-edu-table{
+    margin-left: var(--submenu-lr-margin);
+    margin-right: var(--submenu-lr-margin);
+    width: calc( 100% - (var(--submenu-lr-margin) * 2));
+
+    margin-bottom: 13vh;
+}
+
+.ele-edu-table thead tr th,
+.ele-edu-table thead tr td,
+.ele-edu-table tbody tr td{
+    vertical-align: middle;
+}
+
+.ele-edu-table thead tr th{
+    background-color: #AB0101;
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-size: 1.0rem;
+    font-weight: 300;
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
+    text-align: center;
+}
+
+.ele-edu-table tbody{
+    border-bottom: #ababab 1px solid;
+}
+
+.ele-edu-table tbody tr:nth-child(2n) td{
+    color: #000;
+    font-family: 'Noto Sans KR';
+    font-size: 1.0rem;
+    font-weight: 300;
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
+}
+
+.ele-edu-table tbody tr:nth-child(2n-1) td{
+    background-color: #F5F5F5;
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
+}
+
+.ele-edu-table tr td:nth-child(2n),
+.ele-edu-table tr th:nth-child(2n){
+    border-left: #ababab 1px solid;
+}
+
+.ele-edu-table tbody tr td{
+    border-top: #ababab 1px solid;
+}
+
+.ele-edu-table tbody tr td:first-child{
+    text-align: center;
+}
+
+.ele-edu-table tbody tr td:nth-child(2){
+    padding-left: 0.5rem;
+}
+
+.ele-edu-table tbody tr td p{
+    margin-bottom: 0.5rem;
+    line-height: 1.25rem;
+}
+
+
+.eduhigh .core-card-box{
+    margin-top: 5vh;
+    height: 20vh;
+    width : 100%;
+}
+
+.eduhigh .core-card{
+    text-align: center;
+    margin-top:6vw;
+}
+
+.eduhigh .core-card svg{
+    width: 12vw;
+    transform: scale(1.0);
+    transition: all 1.0s ;
+    -webkit-transition: all 1.0s ;
+}
+
+.eduhigh .core-card.active svg{
+    transform: scale(1.5);
+    /* filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg) drop-shadow(0px 0px 3px #000000ee); */
+    /*filter :  grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);*/
+    stroke: #AB0101;
+}
+
+
+.eduhigh .core-card svg rect, 
+.eduhigh .core-card svg path,
+.eduhigh .core-card svg circle,
+.eduhigh .core-card svg line{
+    transition: all 1.0s ;
+    -webkit-transition: all 1.0s ;
+    stroke: #898989;
+}
+
+.eduhigh .core-card.active svg rect, 
+.eduhigh .core-card.active svg path,
+.eduhigh .core-card.active svg circle,
+.eduhigh .core-card.active svg line{
+    stroke: #AB0101;
+}
+
+.eduhigh .core-card img{
+    box-shadow: 1px 1px 54px #6029290D;
+}
+
+.eduhigh .core-card .card-body{
+    margin-top : 1.0rem;
+    
+}
+
+.eduhigh .core-card a{
+	text-decoration-line: none;
+}
+
+.eduhigh .core-card .card-body span{
+    font-family: 'Noto Sans KR', sans-serif!important;
+    font-size: 1.0rem;
+    color: #242424;
+    font-weight: 400!important;
 }
