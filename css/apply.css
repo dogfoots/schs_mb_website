@@ -1,0 +1,155 @@
+.apply > h3{
+    font-family: 'Noto Serif KR', 'serif';
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.apply > img.apply-bg{
+    margin-top: 4vh;
+}
+
+.apply > .apply-intro{
+	font-family: 'Noto Sans KR';
+    font-size: 1.0rem;
+    padding-left: var(--submenu-lr-margin);
+    padding-right: var(--submenu-lr-margin);
+    color: #616161;
+    text-align: justify;
+    line-height: 1.7rem;
+
+    margin-top: var(--submenu-lr-margin);
+}
+
+.apply > .apply-intro > p:nth-child(2){
+    margin-top: 4vh;
+}
+
+.apply > .apply-contents,
+.apply > .apply-process{
+    margin-top: 10vh;
+    padding-left: var(--submenu-lr-margin);
+    padding-right: var(--submenu-lr-margin);
+}
+
+.apply > .apply-process{
+    margin-top: 6vh;
+    margin-bottom: 10vh;
+}
+
+.apply > .apply-contents > h3,
+.apply > .apply-process > h3 {
+	font-family: 'Noto Sans KR';
+    font-size: 1.3rem;
+    color: #242424;
+    font-weight: 700;
+}
+
+.apply > .apply-contents > h4 {
+	font-family: 'Noto Sans KR';
+    font-size: 1.2rem;
+    color: #242424;
+    font-weight: 400;
+    margin-top: 3.0vh;
+    line-height: 1.6rem;
+}
+
+.apply > .apply-contents > p{
+	font-family: 'Noto Sans KR';
+    font-size: 1.0rem;
+    color: #616161;
+    font-weight: 300;
+    line-height: 1.6rem;
+}
+
+.apply > .apply-contents > p.qualifi{
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+}
+
+
+.apply > .apply-contents > p.documents{
+    margin-top: 4vh;
+}
+
+.apply > .apply-contents > p.etc{
+    margin-top: 4vh;
+}
+
+.apply > .files{   
+    padding-left: var(--submenu-lr-margin);
+    padding-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+    margin-top: 7vh;
+}
+
+.apply > .files > .down-file{
+    width: 100%;
+    border: #707070 1px solid;
+    height: 2.5rem;
+    margin-bottom: 1.2vh;
+    background-image:url(../imgs/ico-folder.png);
+	background-position:1.5rem 0.55rem;
+	background-repeat:no-repeat;
+    background-size: 1.4rem 1.25rem;
+}
+
+
+.apply > .files > .down-file > a{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    text-align: center;
+    text-decoration-line: none;
+    color: #707070;
+
+    font-family: 'Noto Sans KR';
+    font-size: 1.0rem;
+    font-weight: 400;
+
+    width: 100%;
+    height: 100%;
+}
+
+.apply > .apply-process > h3{
+    margin-bottom: 5vh;
+}
+
+
+.apply > .apply-process > .process-diagram{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(15px);
+}
+
+.apply > .apply-process > .process-diagram > .process-circle{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content : center;
+    background-image:url(../imgs/apply_circle.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+    background-size: 100% 100%;
+    width: 33vw;
+    height: 33vw;
+    color: #AB0101;
+    font-family: 'Noto Sans KR';
+    font-size: 1.0rem;
+    font-weight: 700;
+}
+
+.apply > .apply-process > .process-diagram > .process-circle > span{
+    display: block;
+    text-align: center;
+    line-height: 1.12rem;
+}
+
+.apply > .apply-process > .process-diagram > .process-circle > .small{
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    display: block;
+}
