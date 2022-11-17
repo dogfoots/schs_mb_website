@@ -222,3 +222,56 @@
     color: #242424;
     font-weight: 400!important;
 }
+
+
+.eduhigh .edu-course-card-wrap{
+    width: calc( 100% - (var(--submenu-lr-margin)*2) );
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    padding-left: var(--submenu-lr-margin);   
+    padding-right: var(--submenu-lr-margin); 
+}
+
+
+.eduhigh .edu-course-card-wrap .edu-card{
+    background: #FDFBFB 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+    padding-top: 1.6rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 1.2rem;
+    margin-top: 5vh;
+}
+
+.eduhigh .edu-course-card-wrap .edu-card h3{
+    font-family: 'Noto Sans KR', sans-serif!important;
+    font-size: 1.2rem;
+    color: #242424;
+    font-weight: 600!important;
+}
+
+.eduhigh .edu-course-card-wrap .edu-card p{
+    font-family: 'Noto Sans KR', sans-serif!important;
+    font-size: 1.0rem;
+    color: #616161;
+    font-weight: 300!important;
+    line-height: 1.6rem;
+    margin-top: 1.0rem;
+}
+
+.eduhigh .edu-course-card-wrap .edu-card .tags{
+    margin-top: 1.0rem;
+}
+
+.eduhigh .edu-course-card-wrap .edu-card .tags span{
+    font-family: 'Noto Sans KR', sans-serif!important;
+    font-size: 0.75rem;
+    color: #616161;
+    font-weight: 300!important;
+    margin-right: 0.5rem;
+}
+
+.eduhigh .edu-course-card-wrap .edu-card .tags span::before{
+    content: "#";
+    margin-right: 0.15rem;
+}
