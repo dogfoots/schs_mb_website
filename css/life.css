@@ -87,7 +87,8 @@
     font-family: 'Noto Sans KR', sans-serif!important;
     font-size: 1.0rem;
     font-weight: 700;
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 3px  black;
     opacity: 30%;
     display: block;
     text-decoration-line: none;
