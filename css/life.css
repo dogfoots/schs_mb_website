@@ -4,7 +4,7 @@
     font-size: 6.0vw;
     color: #242424;
     text-align: left;
-    margin-top: 5vh;
+    margin-top: 7vh;
     line-height: 3.0rem;
     margin-left: var(--submenu-lr-margin);
     font-weight: 600;
@@ -47,7 +47,7 @@
 .life-list-wrap .card .contents-box{
     color: #616161;
     font-weight: 300;
-    margin-top: 2vh;
+    margin-top: 1.5vh;
 }
 
 .life-list-wrap .card .contents-box li{
@@ -62,4 +62,54 @@
 
 .life-list-wrap .card .contents-box li p{
     line-height: 3.8vh;
+}
+
+
+.floating-side{
+    position: fixed;
+    float: right;
+    top: 50%;
+    right: 2vw;
+    z-index: 88;
+}
+
+
+.floating-side ul li{
+    margin-bottom: 5vh;
+}
+
+.floating-side ul li.active a{
+    opacity: 100%;
+    text-decoration-line: none;
+}
+
+.floating-side ul li a{
+    font-family: 'Noto Sans KR', sans-serif!important;
+    font-size: 1.0rem;
+    font-weight: 700;
+    color: black;
+    opacity: 30%;
+    display: block;
+    text-decoration-line: none;
+}
+
+.floating-side ul li a::after{
+    content: '';
+    position: relative;
+    margin-left: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #000;
+    left: 0;
+    top: 0;
+    transition: all 2.0s ease;
+    /* border: 1px solid #ffffff; */
+    border-radius: 50%;
+    opacity: 30%;
+    display: inline-block;
+    margin-bottom: 0.1rem;
+}
+.floating-side ul li.active a::after{
+    background-color: #AB0101;
+    opacity: 100%;
 }
