@@ -1,3 +1,7 @@
+:root{
+    --apply-translate-arr : 5vw;
+}
+
 .apply > h3{
     font-family: 'Noto Serif KR', 'serif';
     font-size: 1.3rem;
@@ -35,7 +39,6 @@
 
 .apply > .apply-process{
     margin-top: 6vh;
-    margin-bottom: 10vh;
 }
 
 .apply > .apply-contents > h3,
@@ -122,7 +125,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(15px);
 }
 
 .apply > .apply-process > .process-diagram > .process-circle{
@@ -140,6 +142,17 @@
     font-family: 'Noto Sans KR';
     font-size: 1.0rem;
     font-weight: 700;
+    z-index: 2;
+}
+
+.apply > .apply-process > .process-diagram > .process-arrow{
+    background-image:url(../imgs/apply_arrow.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+    background-size: 100% 100%;
+    width: 5vw;
+    height: 5vw;
+    z-index: 3;
 }
 
 .apply > .apply-process > .process-diagram > .process-circle > span{
@@ -152,4 +165,36 @@
     font-size: 0.8rem;
     margin-top: 0.2rem;
     display: block;
+}
+
+.apply > .apply-process > .process-diagram > .process-arrow.arrow01{
+    transform: translateY( calc( -1 * var(--apply-translate-arr) ) );
+}
+
+.apply > .apply-process > .process-diagram > .process-circle.circle02{
+    transform: translateY( calc( -2 * var(--apply-translate-arr)) );
+}
+
+.apply > .apply-process > .process-diagram > .process-arrow.arrow02{
+    transform: translateY( calc( -3 * var(--apply-translate-arr) ) );
+}
+
+.apply > .apply-process > .process-diagram > .process-circle.circle03{
+    transform: translateY( calc( -4 * var(--apply-translate-arr) ) );
+}
+
+.apply > .apply-process > .process-diagram > .process-arrow.arrow03{
+    transform: translateY( calc( -5 * var(--apply-translate-arr) ) );
+}
+
+.apply > .apply-process > .process-diagram > .process-circle.circle04{
+    transform: translateY( calc( -6 * var(--apply-translate-arr) ) );
+}
+
+.apply > .apply-process > .process-diagram > .process-arrow.arrow04{
+    transform: translateY( calc( -7 * var(--apply-translate-arr) ) );
+}
+
+.apply > .apply-process > .process-diagram > .process-circle.circle05{
+    transform: translateY( calc( -8 * var(--apply-translate-arr) ) );
 }
