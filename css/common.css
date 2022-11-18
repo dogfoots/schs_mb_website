@@ -289,9 +289,18 @@ body{
     border-radius: 50%;
 }
 
+.circle-btn.active{
+	background-color: #ab0101;
+}
+
 .next-btn{
 	background:url(../imgs/left_arrow_grey.svg) no-repeat center center;
     transform: scaleX(1);
+}
+
+.prev-btn{
+	background:url(../imgs/left_arrow_grey.svg) no-repeat center center;
+    transform: scaleX(-1);
 }
 
 

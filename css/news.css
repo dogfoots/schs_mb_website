@@ -1,0 +1,201 @@
+.search-box{
+    padding-left: var(--submenu-lr-margin);
+    padding-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+    margin-top: 5vh;
+}
+
+.search-edit-wrap{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-edit-wrap > input[type="text"]{
+    width: 69vw;
+    height: 1.7rem;
+    color: #242424;
+    font-weight: 700;
+    border: 0px solid #ddd;
+    transition: all .3s;
+    padding: 0.3rem 0.3rem 0.3rem;
+	font-family: 'Noto Sans KR';
+    font-size: 1.0rem;
+}
+
+
+.search-edit-wrap > input[type="text"]::placeholder {
+    font-weight: bold;
+    color: #ddd;
+}
+
+
+.search-edit-wrap > a{
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 1.0rem;
+}
+
+.search-edit-wrap > a > img{
+    width: 100%;
+    height: 100%;
+}
+
+.news-list-wrap{
+    padding-left: var(--submenu-lr-margin);
+    padding-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+    margin-top: 7vh;
+}
+
+
+.news-list-wrap .news-body{
+    margin-left: var(--left-margin);
+    margin-top:15vw;
+    width: calc(100% - (var(--left-margin)*2) );
+}
+
+.news-list-wrap .news-body .news-item{
+    padding-top : 5.5vw;
+    padding-bottom : 5.5vw;
+    border-bottom: #9F9F9F 1px solid;
+}
+
+.news-list-wrap .news-body .news-item a{
+    text-decoration-line: none;
+}
+
+.news-list-wrap .news-body .news-item a .news-date{
+    color: #707070;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.news-list-wrap .news-body .news-item a .news-title{
+    color: #242424;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 1.0rem;
+    margin-top: 3vw;
+    line-height: 1.6rem;
+}
+
+.news-list-wrap .news-body .news-item a .news-preview{
+    color: #242424;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    margin-top: 3vw;
+}
+
+.news-pagenation,
+.bd-tail{
+    padding-left: var(--submenu-lr-margin);
+    padding-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+
+.news-pagenation > ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.news-pagenation > ul > li{
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.news-pagenation > ul > li > a{
+    color: #707070;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    text-decoration-line: none;
+    text-align: center;
+}
+
+.news-pagenation > ul > li > a.active{
+    color: #ffffff;
+    border: 1px #ab0101 solid;
+}
+
+.bd-header{
+    margin-left: var(--submenu-lr-margin);
+    margin-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+	margin-top: calc( var(--header-height) + 5.0vh);
+    padding-bottom: 6.0vh;
+    border-bottom: #707070 2px solid;
+}
+
+.bd-header > .date{
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 1.0rem;
+    line-height: 1.6rem;
+    color: #616161;
+}
+
+.bd-header > h2{
+	font-family: 'Noto Serif KR';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    color: #242424;
+    margin-top: 0.3rem;
+}
+
+.bd-body{
+    margin-left: var(--submenu-lr-margin);
+    margin-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+    padding-top: 4vh;
+    padding-bottom: 4.0vh;
+    border-bottom: #707070 2px solid;
+}
+
+.bd-body > p.contents{
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 1.0rem;
+    line-height: 1.6rem;
+    color: #616161;
+}
+
+.bd-tail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bd-tail > a{
+    display: block;
+    width: 2.3rem;
+    height: 2.3rem;
+    text-decoration: none;
+    color: #707070;
+    font-family: 'Noto Sans KR';
+    font-weight: 500;
+    font-size: 1.0rem;
+}
+
+.bd-tail > a.go-to-list{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: #707070 1px solid;
+}

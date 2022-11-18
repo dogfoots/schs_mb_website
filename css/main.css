@@ -356,25 +356,25 @@
 .section7 .news .news-body .news-item a .news-date{
     color: #616161;
     font-family: 'Noto Sans KR';
-    font-weight: 300;
-    font-size: 4.0vw;
+    font-weight: 400;
+    font-size: 0.8rem;
 }
 
 .section7 .news .news-body .news-item a .news-title{
     color: #242424;
     font-family: 'Noto Sans KR';
     font-weight: 700;
-    font-size: 5.0vw;
+    font-size: 1.0rem;
     margin-top: 3vw;
-    line-height: 7.5vw;
+    line-height: 1.6rem;
 }
 
 .section7 .news .news-body .news-item a .news-preview{
     color: #616161;
     font-family: 'Noto Sans KR';
-    font-weight: 300;
-    font-size: 4.5vw;
-    line-height: 6.5vw;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
     margin-top: 3vw;
 }
 
