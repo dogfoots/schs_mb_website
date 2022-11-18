@@ -295,11 +295,13 @@ body{
 
 .next-btn{
 	background:url(../imgs/left_arrow_grey.svg) no-repeat center center;
+	background-size: 30% 30%;
     transform: scaleX(1);
 }
 
 .prev-btn{
 	background:url(../imgs/left_arrow_grey.svg) no-repeat center center;
+	background-size: 30% 30%;
     transform: scaleX(-1);
 }
 

@@ -5,7 +5,8 @@
     margin-top: 5vh;
 }
 
-.search-edit-wrap{
+.search-edit-wrap,
+.edit-wrap{
     width: 100%;
     border-bottom: 1px solid #ddd;
     display: flex;
@@ -14,7 +15,9 @@
     justify-content: space-between;
 }
 
-.search-edit-wrap > input[type="text"]{
+.search-edit-wrap > input[type="text"],
+.edit-wrap > input[type="text"],
+.edit-wrap > input[type="password"]{
     width: 69vw;
     height: 1.7rem;
     color: #242424;
@@ -26,14 +29,22 @@
     font-size: 1.0rem;
 }
 
+.edit-wrap > input[type="text"],
+.edit-wrap > input[type="password"]{
+    width: 100%;
+}
 
-.search-edit-wrap > input[type="text"]::placeholder {
-    font-weight: bold;
+
+.search-edit-wrap > input[type="text"]::placeholder,
+.edit-wrap > input[type="text"]::placeholder,
+.edit-wrap > input[type="password"]::placeholder{
+    font-weight: 500;
     color: #ddd;
 }
 
 
-.search-edit-wrap > a{
+.search-edit-wrap > a,
+.edit-wrap > a{
     display: block;
     width: 1.8rem;
     height: 1.8rem;
@@ -198,4 +209,134 @@
     align-items: center;
     justify-content: space-around;
     border: #707070 1px solid;
+}
+
+.symbol-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	margin-top: calc( var(--header-height) + 7.0vh);
+}
+
+.symbol-wrap > h2{
+	font-family: 'Noto Serif KR';
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+}
+
+.symbol-wrap > svg{
+    width: 30vw;
+    height: 40vw;
+    margin-top: 3vh;
+}
+
+.symbol-wrap > p{
+    margin-top: 3vh;
+    color: #616161;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 1.0rem;
+}
+
+
+.login-box{
+    margin-left: var(--submenu-lr-margin);
+    margin-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+}
+
+.login-box > .edit-wrap:nth-child(1){
+    margin-bottom: 5vh;
+
+}
+
+
+.login-box > a{
+    display: block;
+    width: 2.3rem;
+    height: 2.8rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    font-size: 1.0rem;
+    background-color: #ab0101;
+}
+
+.login-box > a.login-btn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: #ab0101 1px solid;
+    margin-top: 5vh;
+}
+
+
+
+
+
+
+.gallery-main-wrap{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-main-wrap > .animation-box-wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-main-wrap > .animation-box-wrap > .animation-box{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.gallery-main-wrap > .animation-box-wrap > .animation-box > div{
+    position:absolute;
+}
+
+.gallery-main-wrap > .body-texts-wrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.gallery-main-wrap >  .body-texts-wrap > .body-texts{
+    margin-left: var(--submenu-lr-margin);
+    margin-right: var(--submenu-lr-margin);
+    width: calc( 100% - var(--submenu-lr-margin)*2 );
+}
+
+.gallery-main-wrap > .body-texts-wrap > .body-texts > h2{
+    font-family: 'Noto Serif KR';
+    font-size: 7.0vw;
+    color: #242424;
+    margin-top: 20vh;
+}
+
+.gallery-main-wrap > .body-texts-wrap >  .body-texts > p{
+    font-family: 'Noto Sans KR';
+    font-size: 4.2vw;
+    color: #616161;
+    line-height: 3.7vh;
+    font-weight: 300;
+    margin-top: 2vh;
+    width: 100%;
+    margin-top: 5vh;
 }

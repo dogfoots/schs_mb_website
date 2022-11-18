@@ -21,9 +21,10 @@
     <link rel="stylesheet" type="text/css" href="./css/font.css">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/news.css">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 
 <body>
@@ -44,9 +45,88 @@
         </div>
     </header>
     <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit delectus, asperiores doloribus
-            beatae placeat aut maiores cupiditate similique laborum fugit veritatis sint eligendi vitae recusandae quasi
-            vero iure commodi.갤러리</p>
+        <div class="gallery-main-wrap">
+            <div class="animation-box-wrap">
+                <div class="animation-box">
+
+                </div>
+            </div>
+            <div class="body-texts-wrap">
+                <div class="body-texts">
+                    <h2>학교갤러리</h2>
+                    <p>서울크리스찬중고등학교 학생들의 아름다운 추억들을 담은 갤러리입니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 갤러리 메인  -->
+        <script>
+        var currentImg = undefined,
+            currentImgProps = {x:0, y:0},
+            isZooming = false,
+            mouse = {x:0, y:0},
+            delayedPlay;
+        
+
+            /*db에서 최근 이미지들만 로드하시면 됩니다. (12개 제한)*/
+            loadImageGallMain(0, 0, "../imgs/dummy/thumb-1890315183_lcIJvChb_21ddc501d0ca391932da984fda5b2647ea334c6d_1200x881.jpg");
+            loadImageGallMain(0, 1, "../imgs/dummy/thumb-1890315183_NAnESTJm_1334ab9dc2b8a2b11f29443060214a08cf19521e_1200x881.jpg");
+            loadImageGallMain(0, 2, "../imgs/dummy/thumb-1890315183_LP62GZ1s_13b23ff092e61281041abee280d41eb573c28a3b_1200x881.jpg");
+            loadImageGallMain(0, 3, "../imgs/dummy/thumb-1890315183_dq8Ip5H3_10d8d914ce6385d0e87378b6077183875f882cfc_1200x881.jpg");
+            loadImageGallMain(1, 4, "../imgs/dummy/thumb-1890315183_OjA8RsSE_c19423103b4283c3d0f90d6f2216d89fd034bfbc_1200x881.jpg");
+            loadImageGallMain(1, 5, "../imgs/dummy/thumb-1890315152_1tGriHFa_c0712a33f61e6291b2ca49c249d72127217ef805_1200x881.jpg");
+            loadImageGallMain(1, 6, "../imgs/dummy/thumb-1890315152_tcYCuNBS_b5e1da2bf11a7bb71294a7bad95165c34d16581f_1200x881.jpg");
+            loadImageGallMain(1, 7, "../imgs/dummy/thumb-1890315152_B4dFprsh_ebb5426447dab7066dcb899035d343a2f2189b2b_1200x881.jpg");
+            loadImageGallMain(2, 8, "../imgs/dummy/thumb-1890315152_9m5rlYwu_4a0ef4a96d1a13f06b4155932d80bd5c97e502f6_1200x881.jpg");
+            loadImageGallMain(2, 9, "../imgs/dummy/thumb-1890315152_QSO2UVRx_79be034807338cbce3c5c3c3a83e0431d0a05413_1200x881.jpg");
+            loadImageGallMain(2, 10, "../imgs/dummy/thumb-1890315152_iLfuY1kA_77a583252e9124dc7d0e83974a4d1e48844636fa_1200x881.jpg");
+            loadImageGallMain(2, 11, "../imgs/dummy/thumb-1890315183_eUujqZBT_5ec92dd2c5a5a11b739f047fb4b22de58244b321_1200x881.jpg");
+            
+            function loadImageGallMain(column, i, url){
+                var b = document.createElement('div');    
+                $('.animation-box').append(b);
+                
+                gsap.set(b, {
+                    attr:{ id:'b'+i, class:'photoBox pb-col'+column },
+                    backgroundImage:'url('+url+')',
+                    backgroundSize:'cover',
+                    backgroundPosition:'center',
+                    overflow:'hidden',
+                    x:[60,280,500][column],
+                    width:400,
+                    height:640,
+                    borderRadius:20,
+                    scale:0.5,
+                    zIndex:0
+                });
+            
+                b.tl = gsap.timeline({paused:true, repeat:-1})
+                    .fromTo(b, {y:[-575,800,800][column], rotation:-0.05}, 
+                                {duration:[40,35,26][column], 
+                                y:[800,-575,-575][column], 
+                                rotation:0.05, 
+                                ease:'none'})
+                    .progress(i%4/4);
+            }
+
+            
+
+            function playBoxes(){ 
+                for (var i=0; i<$('.animation-box').children().length; i++) { 
+                    var tl = $('.animation-box').children()[i].tl;
+                    tl.play();
+                    gsap.to(tl, {duration:0.4, timeScale:1, ease:'sine.in', overwrite:true});
+                }
+            }
+
+            window.onload = function(){
+                var _tl = gsap.timeline({onStart:playBoxes})
+                .set('.animation-box-wrap', {perspective:800})
+                .set('.animation-box',   {left:'75%', xPercent:-0, width:1200, rotationX:14, rotationY:-0, rotationZ:-2})
+                .fromTo('.animation-box-wrap', {autoAlpha:0},{duration:0.6, ease:'power2.inOut', autoAlpha:1}, 0.2);
+            }
+            
+        </script>
 
         <script type="text/javascript">
             //gnb메뉴 초기화. 각 서브페이지에 맞게 복사해야함
