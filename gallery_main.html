@@ -25,6 +25,7 @@
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -70,28 +71,58 @@
                     <span class="gal-date">2022.05.12</span>
                     <h4 class="gal-title">연세대학교 학군단 방문 견학</h4>
                     <div class="gal-img-wrap">
-                        <img src="./imgs/dummy/thumb-1890315183_lcIJvChb_21ddc501d0ca391932da984fda5b2647ea334c6d_1200x881.jpg">
+                        <img src="./imgs/dummy/thumb_1890315183_lcIJvChb_21ddc501d0ca391932da984fda5b2647ea334c6d_1200x881.jpg">
                     </div>
                 </div>
                 <div class="gal-card">
                     <span class="gal-date">2022.05.12</span>
                     <h4 class="gal-title">연세대학교 학군단 방문 견학</h4>
                     <div class="gal-img-wrap">
-                        <img src="./imgs/dummy/thumb-1890315183_NAnESTJm_1334ab9dc2b8a2b11f29443060214a08cf19521e_1200x881.jpg">
+                        <img src="./imgs/dummy/thumb_1890315183_NAnESTJm_1334ab9dc2b8a2b11f29443060214a08cf19521e_1200x881.jpg">
                     </div>
                 </div>
                 <div class="gal-card">
                     <span class="gal-date">2022.05.12</span>
                     <h4 class="gal-title">연세대학교 학군단 방문 견학</h4>
                     <div class="gal-img-wrap">
-                        <img src="./imgs/dummy/thumb-1890315183_LP62GZ1s_13b23ff092e61281041abee280d41eb573c28a3b_1200x881.jpg">
+                        <img src="./imgs/dummy/thumb_1890315183_LP62GZ1s_13b23ff092e61281041abee280d41eb573c28a3b_1200x881.jpg">
                     </div>
                 </div>
             </div>
         </div>
+        <div class="layer-pop zoom-pop" style="display:none;">
+            <div class="top-area">
+                <a class="close-btn" href="javascript:;" onclick="closePopup('.zoom-pop')">
+                    <img src="./imgs/pop_close.png" alt="popup close">
+                </a>
+            </div>
+            <div class="layer-img-contents-wrap">
+                <div class="layer-img-contents">
+                    <img id="large-img-pop">
+                </div>
+            </div>
+            <div class="bottom-area"></div>
+        </div>
 
         <!-- 갤러리 메인  -->
-        <script>
+        <script>        
+            //infinite reload. ajax 처리를 통해서 자동 로딩 필요.    
+            function onLoadGalleryImage(){
+                //--TODO!! ajax call 후에 아래 함수 호출하여 카드 만들것.
+                addGalleryCard("2022.11.21", "학군단", "./imgs/dummy/thumb_1890315183_lcIJvChb_21ddc501d0ca391932da984fda5b2647ea334c6d_1200x881.jpg");
+            }
+
+            function addGalleryCard(dateStr, title, imgUrl){
+                var html = '<div class="gal-card">';
+                    html += '<span class="gal-date">'+dateStr+'</span>';
+                    html += '<h4 class="gal-title">'+title+'</h4>';
+                    html += '<div class="gal-img-wrap">';
+                    html += '<img src="'+imgUrl+'">';
+                    html += '</div>';
+                    html += '</div>';
+                $(".list-box").append(html);
+            }
+
         var currentImg = undefined,
             currentImgProps = {x:0, y:0},
             isZooming = false,
@@ -100,18 +131,18 @@
         
 
             /*db에서 최근 이미지들만 로드하시면 됩니다. (12개 제한)*/
-            loadImageGallMain(0, 0, "../imgs/dummy/thumb-1890315183_lcIJvChb_21ddc501d0ca391932da984fda5b2647ea334c6d_1200x881.jpg");
-            loadImageGallMain(0, 1, "../imgs/dummy/thumb-1890315183_NAnESTJm_1334ab9dc2b8a2b11f29443060214a08cf19521e_1200x881.jpg");
-            loadImageGallMain(0, 2, "../imgs/dummy/thumb-1890315183_LP62GZ1s_13b23ff092e61281041abee280d41eb573c28a3b_1200x881.jpg");
-            loadImageGallMain(0, 3, "../imgs/dummy/thumb-1890315183_dq8Ip5H3_10d8d914ce6385d0e87378b6077183875f882cfc_1200x881.jpg");
-            loadImageGallMain(1, 4, "../imgs/dummy/thumb-1890315183_OjA8RsSE_c19423103b4283c3d0f90d6f2216d89fd034bfbc_1200x881.jpg");
-            loadImageGallMain(1, 5, "../imgs/dummy/thumb-1890315152_1tGriHFa_c0712a33f61e6291b2ca49c249d72127217ef805_1200x881.jpg");
-            loadImageGallMain(1, 6, "../imgs/dummy/thumb-1890315152_tcYCuNBS_b5e1da2bf11a7bb71294a7bad95165c34d16581f_1200x881.jpg");
-            loadImageGallMain(1, 7, "../imgs/dummy/thumb-1890315152_B4dFprsh_ebb5426447dab7066dcb899035d343a2f2189b2b_1200x881.jpg");
-            loadImageGallMain(2, 8, "../imgs/dummy/thumb-1890315152_9m5rlYwu_4a0ef4a96d1a13f06b4155932d80bd5c97e502f6_1200x881.jpg");
-            loadImageGallMain(2, 9, "../imgs/dummy/thumb-1890315152_QSO2UVRx_79be034807338cbce3c5c3c3a83e0431d0a05413_1200x881.jpg");
-            loadImageGallMain(2, 10, "../imgs/dummy/thumb-1890315152_iLfuY1kA_77a583252e9124dc7d0e83974a4d1e48844636fa_1200x881.jpg");
-            loadImageGallMain(2, 11, "../imgs/dummy/thumb-1890315183_eUujqZBT_5ec92dd2c5a5a11b739f047fb4b22de58244b321_1200x881.jpg");
+            loadImageGallMain(0, 0, "../imgs/dummy/thumb_1890315183_lcIJvChb_21ddc501d0ca391932da984fda5b2647ea334c6d_1200x881.jpg");
+            loadImageGallMain(0, 1, "../imgs/dummy/thumb_1890315183_NAnESTJm_1334ab9dc2b8a2b11f29443060214a08cf19521e_1200x881.jpg");
+            loadImageGallMain(0, 2, "../imgs/dummy/thumb_1890315183_LP62GZ1s_13b23ff092e61281041abee280d41eb573c28a3b_1200x881.jpg");
+            loadImageGallMain(0, 3, "../imgs/dummy/thumb_1890315183_dq8Ip5H3_10d8d914ce6385d0e87378b6077183875f882cfc_1200x881.jpg");
+            loadImageGallMain(1, 4, "../imgs/dummy/thumb_1890315183_OjA8RsSE_c19423103b4283c3d0f90d6f2216d89fd034bfbc_1200x881.jpg");
+            loadImageGallMain(1, 5, "../imgs/dummy/thumb_1890315152_1tGriHFa_c0712a33f61e6291b2ca49c249d72127217ef805_1200x881.jpg");
+            loadImageGallMain(1, 6, "../imgs/dummy/thumb_1890315152_tcYCuNBS_b5e1da2bf11a7bb71294a7bad95165c34d16581f_1200x881.jpg");
+            loadImageGallMain(1, 7, "../imgs/dummy/thumb_1890315152_B4dFprsh_ebb5426447dab7066dcb899035d343a2f2189b2b_1200x881.jpg");
+            loadImageGallMain(2, 8, "../imgs/dummy/thumb_1890315152_9m5rlYwu_4a0ef4a96d1a13f06b4155932d80bd5c97e502f6_1200x881.jpg");
+            loadImageGallMain(2, 9, "../imgs/dummy/thumb_1890315152_QSO2UVRx_79be034807338cbce3c5c3c3a83e0431d0a05413_1200x881.jpg");
+            loadImageGallMain(2, 10, "../imgs/dummy/thumb_1890315152_iLfuY1kA_77a583252e9124dc7d0e83974a4d1e48844636fa_1200x881.jpg");
+            loadImageGallMain(2, 11, "../imgs/dummy/thumb_1890315183_eUujqZBT_5ec92dd2c5a5a11b739f047fb4b22de58244b321_1200x881.jpg");
             
             function loadImageGallMain(row, i, url){
                 var b = document.createElement('div');    
@@ -139,7 +170,6 @@
                                 ease:'none'})
                     .progress(i%4/4);
             }
-
             
 
             function playBoxes(){ 
@@ -150,12 +180,60 @@
                 }
             }
 
-            window.onload = function(){
+
+            var g_searchbox_height=0;
+            window.onload = function(){    
                 var _tl = gsap.timeline({onStart:playBoxes})
                 .set('.animation-box-wrap', {perspective:800})
                 .set('.animation-box',   {left:'75%', xPercent:-0, width:1200, rotationX:14, rotationY:-0, rotationZ:-2})
                 .fromTo('.animation-box-wrap', {autoAlpha:0},{duration:0.6, ease:'power2.inOut', autoAlpha:1}, 0.2);
+
+                g_searchbox_height = $(".gallery-list-wrap").offset().top-$(".search-box.gallery").offset().top;
+                console.log(g_searchbox_height);
+
+                document.addEventListener('scroll', (e) => {
+                    if(window.scrollY >= screen.height){
+                        $(".search-box").addClass("fixed");
+                        $(".gallery-list-wrap").css("padding-top", ""+(g_searchbox_height+rem2px(4.0))+"px");
+                    }else{
+                        $(".search-box").removeClass("fixed");
+                        $(".gallery-list-wrap").css("padding-top", ""+rem2px(4.0)+"px");
+                    }
+                    
+                    //infinite reload. ajax 처리를 통해서 자동 로딩 필요.
+                    checkReloadLimit();
+                });
             }
+
+
+            function checkReloadLimit(){
+                var cardCnt = $(".gal-card").length;
+                if(cardCnt == 0 ){
+                    //아무것도 없을 시
+                    onLoadGalleryImage();
+                    return;
+                }
+
+                var paddingB = parseFloat($(".gal-card").css('padding-bottom').replace("px",""));
+                var cardHeight = paddingB + $(".gal-card").height();
+                var scrollLimit = $(".gallery-main-wrap").height()+ (cardHeight * (cardCnt-1));
+                
+                if((window.scrollY+window.innerHeight) >= scrollLimit){
+                    onLoadGalleryImage();
+                }
+            }
+            
+            $(document).ready(function(){
+                $(".gal-card").each(function(index, item){
+                    $(item).on('click', function(e){
+                        let path = $(item).find("img").prop("src");
+                        path = path.replace('thumb_','');
+                        $("#large-img-pop").prop("src",path);
+
+                        openPopup('.zoom-pop');
+                    });
+                });
+            });
             
         </script>
 
