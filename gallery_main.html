@@ -58,6 +58,37 @@
                 </div>
             </div>
         </div>
+        <div class="search-box gallery">
+            <div class="search-edit-wrap">
+                <input type="text" placeholder="SEARCH">
+                <a href="javascript:;"><img src="./imgs/ico-search.svg"></a>
+            </div>
+        </div>
+        <div class="gallery-list-wrap">
+            <div class="list-box">
+                <div class="gal-card">
+                    <span class="gal-date">2022.05.12</span>
+                    <h4 class="gal-title">연세대학교 학군단 방문 견학</h4>
+                    <div class="gal-img-wrap">
+                        <img src="./imgs/dummy/thumb-1890315183_lcIJvChb_21ddc501d0ca391932da984fda5b2647ea334c6d_1200x881.jpg">
+                    </div>
+                </div>
+                <div class="gal-card">
+                    <span class="gal-date">2022.05.12</span>
+                    <h4 class="gal-title">연세대학교 학군단 방문 견학</h4>
+                    <div class="gal-img-wrap">
+                        <img src="./imgs/dummy/thumb-1890315183_NAnESTJm_1334ab9dc2b8a2b11f29443060214a08cf19521e_1200x881.jpg">
+                    </div>
+                </div>
+                <div class="gal-card">
+                    <span class="gal-date">2022.05.12</span>
+                    <h4 class="gal-title">연세대학교 학군단 방문 견학</h4>
+                    <div class="gal-img-wrap">
+                        <img src="./imgs/dummy/thumb-1890315183_LP62GZ1s_13b23ff092e61281041abee280d41eb573c28a3b_1200x881.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 갤러리 메인  -->
         <script>
@@ -82,17 +113,17 @@
             loadImageGallMain(2, 10, "../imgs/dummy/thumb-1890315152_iLfuY1kA_77a583252e9124dc7d0e83974a4d1e48844636fa_1200x881.jpg");
             loadImageGallMain(2, 11, "../imgs/dummy/thumb-1890315183_eUujqZBT_5ec92dd2c5a5a11b739f047fb4b22de58244b321_1200x881.jpg");
             
-            function loadImageGallMain(column, i, url){
+            function loadImageGallMain(row, i, url){
                 var b = document.createElement('div');    
                 $('.animation-box').append(b);
                 
                 gsap.set(b, {
-                    attr:{ id:'b'+i, class:'photoBox pb-col'+column },
+                    attr:{ id:'b'+i, class:'photoBox p-row'+row },
                     backgroundImage:'url('+url+')',
                     backgroundSize:'cover',
                     backgroundPosition:'center',
                     overflow:'hidden',
-                    x:[60,280,500][column],
+                    y:[120,400,660][row],
                     width:400,
                     height:640,
                     borderRadius:20,
@@ -101,9 +132,9 @@
                 });
             
                 b.tl = gsap.timeline({paused:true, repeat:-1})
-                    .fromTo(b, {y:[-575,800,800][column], rotation:-0.05}, 
-                                {duration:[40,35,26][column], 
-                                y:[800,-575,-575][column], 
+                    .fromTo(b, {x:[-345,560,600][row], rotation:-0.05}, 
+                                {duration:[40,35,26][row], 
+                                x:[520,-345,-345][row], 
                                 rotation:0.05, 
                                 ease:'none'})
                     .progress(i%4/4);
